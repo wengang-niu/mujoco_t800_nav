@@ -30,9 +30,9 @@ def main():
     print(f"== 关节（共 {model.njnt} 个，含浮基自由关节）==")
     for jid in range(model.njnt):
         name = mujoco.mj_id2name(model, mujoco.mjtObj.mjOBJ_JOINT, jid)
-        jtype = model.jnt_type[jid]
-        qadr = model.jnt_qposadr[jid]
-        dadr = model.jnt_dofadr[jid]
+        jtype = model.jnt_type[jid]      # 关节类型：0=自由(free) 1=球(ball) 2=滑动(slide) 3=铰链(hinge)
+        qadr = model.jnt_qposadr[jid]    # 该关节在 data.qpos（广义位置）中的起始下标
+        dadr = model.jnt_dofadr[jid]     # 该关节在 data.qvel（广义速度，按自由度编号）中的起始下标
         print(f"  jid={jid:2d}  name={name!r:24s} type={int(jtype)} "
               f"qpos_adr={qadr:2d} dof_adr={dadr:2d}")
 

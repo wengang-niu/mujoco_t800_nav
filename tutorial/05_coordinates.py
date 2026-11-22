@@ -5,13 +5,37 @@
 
 运行：python tutorial/05_coordinates.py
 """
-import mujoco
+import pathlib
 
-import common as C
+import mujoco
+import numpy as np
+
+# 本文件在 tutorial/ 下，上一级是项目根目录。
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+MODEL_PATH = ROOT / "engineai_robotics_native_sdk" / "assets" / "resource" / "t800.xml"
+
+
+def load_model():
+    """加载 T800 模型并复位（绝对路径，MuJoCo 4.0 下避免相对路径加载失败）。"""
+    model = mujoco.MjModel.from_xml_path(str(MODEL_PATH))
+    data = mujoco.MjData(model)
+    mujoco.mj_resetData(model, data)
+    mujoco.mj_forward(model, data)
+    return model, data
+
+
+def quat_to_rot(q):
+    """四元数 (w,x,y,z) -> 3x3 旋转矩阵（body -> world）。"""
+    w, x, y, z = q
+    return np.array([
+        [1 - 2 * (y * y + z * z), 2 * (x * y - w * z), 2 * (x * z + w * y)],
+        [2 * (x * y + w * z), 1 - 2 * (x * x + z * z), 2 * (y * z - w * x)],
+        [2 * (x * z - w * y), 2 * (y * z + w * x), 1 - 2 * (x * x + y * y)],
+    ])
 
 
 def main():
-    model, data = C.load_model()
+    model, data = load_model()
     mujoco.mj_forward(model, data)
 
     print(f"{'body':20s} {'局部 pos (相对父body)':30s} {'世界 xpos':28s}")
@@ -24,7 +48,7 @@ def main():
 
     # 把 body 局部点转换到世界系
     base_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_BODY, "LINK_BASE")
-    R = C.quat_to_rot(data.qpos[3:7])       # body -> world 旋转
+    R = quat_to_rot(data.qpos[3:7])         # body -> world 旋转
     local_point = model.body_pos[base_id]   # LINK_BASE 的局部点
     world_point = data.xpos[base_id] + R @ local_point
     print("\nLINK_BASE 局部点转世界：", world_point.round(4))

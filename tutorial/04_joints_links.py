@@ -5,13 +5,26 @@
 
 运行：python tutorial/04_joints_links.py
 """
+import pathlib
+
 import mujoco
 
-import common as C
+# 本文件在 tutorial/ 下，上一级是项目根目录。
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+MODEL_PATH = ROOT / "engineai_robotics_native_sdk" / "assets" / "resource" / "t800.xml"
+
+
+def load_model():
+    """加载 T800 模型并复位（绝对路径，MuJoCo 4.0 下避免相对路径加载失败）。"""
+    model = mujoco.MjModel.from_xml_path(str(MODEL_PATH))
+    data = mujoco.MjData(model)
+    mujoco.mj_resetData(model, data)
+    mujoco.mj_forward(model, data)
+    return model, data
 
 
 def main():
-    model, data = C.load_model()
+    model, data = load_model()
 
     # --- 关节（joint）---
     print(f"== 关节（共 {model.njnt} 个，含浮基自由关节）==")

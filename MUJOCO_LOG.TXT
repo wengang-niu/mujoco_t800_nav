@@ -1,0 +1,12 @@
+WARNING Mon Nov 23 17:55:11 2026: Attach conflict when attaching 'engineai_robotics' to 'val_2', policy is 'warning'
+tolerance: parent has 1e-08 (default), child has 1e-10, keeping parent value
+
+WARNING Mon Nov 23 17:57:10 2026: Attach conflict when attaching 'engineai_robotics' to 'val_2', policy is 'warning'
+tolerance: parent has 1e-08 (default), child has 1e-10, keeping parent value
+
+WARNING Mon Nov 23 17:57:40 2026: Attach conflict when attaching 'engineai_robotics' to 'val_2', policy is 'warning'
+tolerance: parent has 1e-08 (default), child has 1e-10, keeping parent value
+
+WARNING Mon Nov 23 18:19:14 2026: Attach conflict when attaching 'engineai_robotics' to 'val_2', policy is 'warning'
+tolerance: parent has 1e-08 (default), child has 1e-10, keeping parent value
+

@@ -124,7 +124,7 @@ python tutorial/03_load_t800.py
 
 - **link / body**：刚体（躯干、大腿、小腿、脚）。
 - **joint**：连接两个 body 的关节，决定它们如何相对运动。
-- 用 `mujoco.mj_id2name(model, mjtObj.mjOBJ_JOINT, id)` 得到关节名，用 `mj_name2id` 反查 ID。
+- 用 `model.joint(id).name` 得到关节名，用 `model.joint("名字").id` 反查 ID；body 同理用 `model.body(id).name` / `model.body("名字").id`。
 
 代码：[tutorial/04_joints_links.py](tutorial/04_joints_links.py)
 
@@ -132,7 +132,7 @@ python tutorial/03_load_t800.py
 python tutorial/04_joints_links.py
 ```
 
-关键点：关节 0 是浮基自由关节（`name=None`），它占据 qpos 前 7 位（位置 + 四元数）。所以「第几个关节」≠「qpos 的第几个元素」，必须用 `jnt_qposadr` / `jnt_dofadr` 寻址。
+关键点：关节 0 是浮基自由关节（`model.joint(0).name == ''`，无名字），它占据 qpos 前 7 位（位置 + 四元数）。所以「第几个关节」≠「qpos 的第几个元素」，寻址交给 `model.joint("名字").qposadr` / `.dofadr`（或直接读 `data.joint("名字").qpos`）。
 
 ---
 

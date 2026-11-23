@@ -98,14 +98,11 @@ def load_model_with_box(half=0.1, mass=1.0, pos=(1.2, 0.0, 0.1), collidable=True
 
 
 def build_addresses(model):
-    jid = np.array([mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_JOINT, n)
-                    for n in JOINT_NAMES], dtype=int)
-    qadr = model.jnt_qposadr[jid].astype(int)
-    dadr = model.jnt_dofadr[jid].astype(int)
-    aid = np.array([mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_ACTUATOR, "motor_" + n)
-                    for n in JOINT_NAMES], dtype=int)
+    qadr = np.array([model.joint(n).qposadr[0] for n in JOINT_NAMES], dtype=int)
+    dadr = np.array([model.joint(n).dofadr[0] for n in JOINT_NAMES], dtype=int)
+    aid = np.array([model.actuator("motor_" + n).id for n in JOINT_NAMES], dtype=int)
     tau_lim = model.actuator_ctrlrange[aid][:, 1].copy()
-    return {"jid": jid, "qadr": qadr, "dadr": dadr, "aid": aid, "tau_lim": tau_lim}
+    return {"qadr": qadr, "dadr": dadr, "aid": aid, "tau_lim": tau_lim}
 
 
 def quat_to_rot(q):
@@ -207,9 +204,9 @@ def main():
     model, data = load_model_with_box(half=0.06, mass=0.4, pos=(0.3, -0.2, 0.8),
                                       collidable=False)  # 展示块，不参与碰撞
     w = Walker(model, data)
-    box_id = mujoco.mj_name2id(w.model, mujoco.mjtObj.mjOBJ_BODY, "box")
-    wrist_id = mujoco.mj_name2id(w.model, mujoco.mjtObj.mjOBJ_BODY, "LINK_WRIST_END_R")
-    box_qadr = w.model.jnt_qposadr[w.model.body_jntadr[box_id]]  # 木块自由关节 qpos 地址
+    box_id = w.model.body("box").id
+    wrist_id = w.model.body("LINK_WRIST_END_R").id
+    box_qadr = w.model.joint(w.model.body("box").jntadr[0]).qposadr[0]  # 木块自由关节 qpos 地址
 
     transition = int(0.5 / CONTROL_DT)
     total = int(8.0 / CONTROL_DT)

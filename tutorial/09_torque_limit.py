@@ -40,8 +40,7 @@ def load_model():
 
 def build_addresses(model):
     """预计算 25 个关节的执行器地址与力矩上限，避免逐步字符串查找。"""
-    aid = np.array([mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_ACTUATOR, "motor_" + n)
-                    for n in JOINT_NAMES], dtype=int)
+    aid = np.array([model.actuator("motor_" + n).id for n in JOINT_NAMES], dtype=int)
     tau_lim = model.actuator_ctrlrange[aid][:, 1].copy()  # 对称范围，取上限
     return {"aid": aid, "tau_lim": tau_lim}
 

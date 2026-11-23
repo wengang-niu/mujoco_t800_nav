@@ -51,10 +51,8 @@ def load_model():
 
 def build_addresses(model):
     """预计算 25 个关节的 qpos/qvel/执行器地址，避免逐步字符串查找。"""
-    jid = np.array([mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_JOINT, n)
-                    for n in JOINT_NAMES], dtype=int)
-    qadr = model.jnt_qposadr[jid].astype(int)
-    dadr = model.jnt_dofadr[jid].astype(int)
+    qadr = np.array([model.joint(n).qposadr[0] for n in JOINT_NAMES], dtype=int)
+    dadr = np.array([model.joint(n).dofadr[0] for n in JOINT_NAMES], dtype=int)
     return {"qadr": qadr, "dadr": dadr}
 
 

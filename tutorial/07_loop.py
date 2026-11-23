@@ -1,14 +1,12 @@
 """第 7 课 · MuJoCo 仿真主循环。
 
 mj_step 是推进仿真「一帧」的核心调用。本课演示「读取状态 → 写入控制 → mj_step」
-三部曲：无控制时机器人因重力倒地，并打印基座高度/倾角。
+三部曲：无控制时机器人因重力倒地，用 3D 窗口直接观看。
 对应视频 P07 的「11 号程序」。
 
 运行：
-  python tutorial/07_loop.py              # 无窗口跑 3 秒，打印诊断
-  python tutorial/07_loop.py --viewer     # 打开 viewer 观看
+  python tutorial/07_loop.py     # 打开 viewer 观看
 """
-import argparse
 import pathlib
 import time
 
@@ -56,75 +54,26 @@ def load_model():
     return model, data
 
 
-def build_addresses(model):
-    """预计算 25 个关节的 qpos/qvel/执行器地址与力矩上限，避免逐步字符串查找。"""
-    jid = np.array([mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_JOINT, n)
-                    for n in JOINT_NAMES], dtype=int)
-    qadr = model.jnt_qposadr[jid].astype(int)
-    dadr = model.jnt_dofadr[jid].astype(int)
-    aid = np.array([mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_ACTUATOR, "motor_" + n)
-                    for n in JOINT_NAMES], dtype=int)
-    tau_lim = model.actuator_ctrlrange[aid][:, 1].copy()
-    return {"jid": jid, "qadr": qadr, "dadr": dadr, "aid": aid, "tau_lim": tau_lim}
-
-
-def quat_to_rot(q):
-    """四元数 (w,x,y,z) -> 3x3 旋转矩阵（body -> world）。"""
-    w, x, y, z = q
-    return np.array([
-        [1 - 2 * (y * y + z * z), 2 * (x * y - w * z), 2 * (x * z + w * y)],
-        [2 * (x * y + w * z), 1 - 2 * (x * x + z * z), 2 * (y * z - w * x)],
-        [2 * (x * z - w * y), 2 * (y * z + w * x), 1 - 2 * (x * x + y * y)],
-    ])
-
-
-def projected_gravity(data):
-    """世界重力 [0,0,-1] 投影到基座坐标系（直立时 ≈ [0,0,-1]）。"""
-    R = quat_to_rot(data.qpos[3:7])
-    return R.T @ np.array([0.0, 0.0, -1.0])
-
-
 def main():
-    args = parse_args()
     model, data = load_model()
-    # 初始姿态设为默认姿态、基座抬到脚底触地高度
-    data.qpos[2] = BASE_Z
+
+    # —— 初始化姿态：把机器人摆成官方默认站姿 ——
+    data.qpos[2] = BASE_Z                      # 基座 Z 抬到「脚底刚触地」的高度
     for i, n in enumerate(JOINT_NAMES):
-        data.qpos[model.jnt_qposadr[mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_JOINT, n)]] = DEFAULT_Q[i]
-    mujoco.mj_forward(model, data)
+        data.joint(n).qpos[0] = DEFAULT_Q[i]   # 访问器写入：等价于向 data.qpos 写该关节角
+    mujoco.mj_forward(model, data)             # 用新状态重算前向运动学
 
-    if args.viewer:
-        run_viewer(model, data)
-    else:
-        run_headless(model, data)
-
-
-def run_headless(model, data, seconds=3.0):
-    total = int(seconds / model.opt.timestep)
-    print(f"{'t(s)':>6} {'base_z':>8} {'pitch_deg':>9}")
-    for step in range(total):
-        data.ctrl[:] = 0.0            # 无控制：所有电机不给力矩
-        mujoco.mj_step(model, data)   # 推进一帧
-        if step % 50 == 0:
-            proj_g = projected_gravity(data)
-            pitch = np.rad2deg(np.arctan2(proj_g[0], -proj_g[2]))
-            print(f"{data.time:6.2f} {data.qpos[2]:8.3f} {pitch:9.2f}")
-    print("结论：无电机力矩时，机器人因重力倒下（这是浮基双足的正常表现）。")
+    run_viewer(model, data)
 
 
 def run_viewer(model, data):
+    """打开 3D 窗口，循环推进仿真，实时观看机器人因重力倒地。"""
     with mujoco.viewer.launch_passive(model, data) as viewer:
         while viewer.is_running():
-            data.ctrl[:] = 0.0
-            mujoco.mj_step(model, data)
-            viewer.sync()
-            time.sleep(model.opt.timestep)
-
-
-def parse_args():
-    p = argparse.ArgumentParser()
-    p.add_argument("--viewer", action="store_true")
-    return p.parse_args()
+            data.ctrl[:] = 0.0                 # 无控制：所有电机不给力矩
+            mujoco.mj_step(model, data)        # 推进一帧
+            viewer.sync()                      # 把最新状态同步到渲染窗口
+            time.sleep(model.opt.timestep)     # 按真实时间节奏跑，别刷太快
 
 
 if __name__ == "__main__":

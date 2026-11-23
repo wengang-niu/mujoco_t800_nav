@@ -41,17 +41,10 @@ def main():
     print(f"{'body':20s} {'局部 pos (相对父body)':30s} {'世界 xpos':28s}")
     for name in ["world", "LINK_BASE", "LINK_HIP_PITCH_L", "LINK_KNEE_PITCH_L",
                  "LINK_ANKLE_ROLL_L", "LINK_FOOT_L", "LINK_WRIST_END_R"]:
-        bid = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_BODY, name)
+        bid = model.body(name).id
         lpos = model.body_pos[bid]          # 相对父 body 的模型定义位置
         wpos = data.xpos[bid]               # 世界坐标
         print(f"{name:20s} {lpos!s:30s} {wpos!s:28s}")
-
-    # 把 body 局部点转换到世界系
-    base_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_BODY, "LINK_BASE")
-    R = quat_to_rot(data.qpos[3:7])         # body -> world 旋转
-    local_point = model.body_pos[base_id]   # LINK_BASE 的局部点
-    world_point = data.xpos[base_id] + R @ local_point
-    print("\nLINK_BASE 局部点转世界：", world_point.round(4))
 
 
 if __name__ == "__main__":

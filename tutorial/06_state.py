@@ -35,9 +35,7 @@ def main():
     print("qpos 关节部分（25 个关节角，初始全 0）：", np.round(data.qpos[7:], 4))
     print("qvel（初始全 0）：", np.round(data.qvel, 4))
     print("ctrl（初始全 0）：", np.round(data.ctrl, 4))
-    print("\n读取一个关节的当前角：",
-          data.qpos[model.jnt_qposadr[
-              mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_JOINT, "J03_KNEE_PITCH_L")]])
+    print("\n读取一个关节的当前角：", data.joint("J03_KNEE_PITCH_L").qpos[0])
 
 
 if __name__ == "__main__":

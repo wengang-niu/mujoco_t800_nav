@@ -48,7 +48,7 @@ def main():
     for _ in range(300):                 # 跑 0.6s，看木块自由落体
         mujoco.mj_step(model, data)
 
-    box_id = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_BODY, "box")
+    box_id = model.body("box").id
     print(f"木块落点 xyz = {np.round(data.xpos[box_id], 3)}")
     print("（把木块加到模型后，后续课程让 T800 踢它/拿它）")
 

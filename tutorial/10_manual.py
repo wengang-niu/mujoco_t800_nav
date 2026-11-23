@@ -63,14 +63,11 @@ def load_model():
 
 def build_addresses(model):
     """预计算 25 个关节的 qpos/qvel/执行器地址与力矩上限，避免逐步字符串查找。"""
-    jid = np.array([mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_JOINT, n)
-                    for n in JOINT_NAMES], dtype=int)
-    qadr = model.jnt_qposadr[jid].astype(int)
-    dadr = model.jnt_dofadr[jid].astype(int)
-    aid = np.array([mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_ACTUATOR, "motor_" + n)
-                    for n in JOINT_NAMES], dtype=int)
+    qadr = np.array([model.joint(n).qposadr[0] for n in JOINT_NAMES], dtype=int)
+    dadr = np.array([model.joint(n).dofadr[0] for n in JOINT_NAMES], dtype=int)
+    aid = np.array([model.actuator("motor_" + n).id for n in JOINT_NAMES], dtype=int)
     tau_lim = model.actuator_ctrlrange[aid][:, 1].copy()
-    return {"jid": jid, "qadr": qadr, "dadr": dadr, "aid": aid, "tau_lim": tau_lim}
+    return {"qadr": qadr, "dadr": dadr, "aid": aid, "tau_lim": tau_lim}
 
 
 def pd_step(model, data, addr, q_des, kp=KP, kd=KD):

@@ -126,9 +126,10 @@ def load_model_with_room():
     cam = head.add_camera()
     cam.name = "head_cam"
     cam.pos = [0.12, 0.0, 0.02]
-    # 相机沿局部 -z 看、局部 +y 是画面上方：-z 对准 +x(前)，+y 对准 +z(上)
-    cam.quat = [0.5, 0.5, -0.5, -0.5]
-    cam.fovy = 60
+    # 相机沿局部 -z 看、局部 +y 是画面上方：
+    # 前视 +x 并下倾 20°，让画面下方能看到前方地面/路径（像真机感知相机），便于避障
+    cam.quat = [0.579228, 0.405580, -0.405580, -0.579228]
+    cam.fovy = 75
     cam.resolution = [640, 480]
 
     # 基座放场景里的生成点（z=BASE_Z 让脚底刚好触地）

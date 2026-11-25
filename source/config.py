@@ -46,6 +46,7 @@ class Config:
     frame_skip: int
     # 复位
     base_z: float
+    base_pos: np.ndarray       # (2,) 出生点 x,y —— 由场景决定，默认原点
     # 遥控
     cmd_step: float
     vx_limit: float
@@ -124,6 +125,7 @@ def load_config(path: pathlib.Path | None = None) -> Config:
         timestep=timestep,
         frame_skip=frame_skip,
         base_z=float(reset["base_z"]),
+        base_pos=np.asarray(reset.get("base_pos", (0.0, 0.0)), dtype=np.float64),
         cmd_step=float(tele["cmd_step"]),
         vx_limit=float(tele["vx_limit"]),
         yaw_limit=float(tele["yaw_limit"]),

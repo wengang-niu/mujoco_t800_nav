@@ -16,3 +16,6 @@ MUJOCO_LOG.TXT
 # 系统
 .DS_Store
 Thumbs.db
+
+# 场景大体积资源（约 2.5GB，用 tools/fetch_scene_assets.py 重建）
+mujoco/objects/

@@ -2,7 +2,9 @@
 
 用 MuJoCo 仿真 T800 人形机器人，加载 MNN 行走策略，键盘遥控前进/后退/转向。
 
-![demo](doc/mujoco.jpg)
+**当前版本：[v0.0.0](CHANGELOG.md)**（键盘控制行走）
+
+![demo](doc/image.png)
 
 ## 目录结构
 
@@ -75,7 +77,7 @@ python source/main.py --config path/to/other.yaml   # 换配置
 ## 场景
 
 当前场景是咖啡馆 `mujoco/scenes/cafe_37874/`（sales floor 128㎡ + bakery kitchen 等），
-俯视图见 `doc/cafe_37874_topdown.png`，接线细节见 `doc/cafe_37874_wiring_notes.md`。
+俯视图见 `doc/scene.png`。
 
 - 实际加载的是 `train_37874_stripped.xml`（已删减缺失纹理的引用，可直接加载）。
 - `mujoco/objects/`（2.5GB）不入版本库，缺资源时重建：
@@ -92,3 +94,7 @@ python source/main.py --config path/to/other.yaml   # 换配置
 
 - 机器人 MJCF / mesh 来自 [engineai-robotics/engineai_robotics_native_sdk](https://github.com/engineai-robotics/engineai_robotics_native_sdk)（仅保留 T800 所需子集）。
 - 咖啡馆场景来自 [allenai/molmospaces](https://huggingface.co/datasets/allenai/molmospaces)（holodeck-objaverse-train `train_37874`，CC-BY-4.0 / ODC-BY）。
+
+## 更新日志
+
+见 [CHANGELOG.md](CHANGELOG.md)。当前版本 `v0.0.0`：键盘控制行走。

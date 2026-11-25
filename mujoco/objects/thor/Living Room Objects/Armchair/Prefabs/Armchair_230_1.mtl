@@ -1,0 +1,11 @@
+newmtl DarkWoodSmooth2
+Kd 0.1226415 0.09082413 0.09082413
+map_Kd ExportedThorAssets/Textures/WoodGrains1.jpg
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Leather3
+Kd 0.5073529 0.2260927 0.1231077
+map_Bump ExportedThorAssets/Textures/Noise1NRM.tga
+illum 2
+

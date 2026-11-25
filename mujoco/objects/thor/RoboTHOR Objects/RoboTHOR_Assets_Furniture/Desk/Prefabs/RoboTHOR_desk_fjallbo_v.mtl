@@ -1,0 +1,19 @@
+newmtl RoboTHOR_Desk_Fjallbo_Wood_Mat
+Kd 0.818 0.6833806 0.543152
+map_Kd ExportedThorAssets/Textures/DarkWoodFloors.jpg
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl RoboTHOR_Desk_Fjallbo_Steel_Mat
+Kd 0.1981132 0.1981132 0.1981132
+map_Ks ExportedThorAssets/Textures/SteelMetallic2.png
+map_Bump ExportedThorAssets/Textures/SteelNRM.png
+illum 2
+
+newmtl RoboTHOR_Desk_Fjallbo_Steel_Grid_Mat
+Kd 0.1981132 0.1981132 0.1981132
+map_Kd ExportedThorAssets/Textures/Microwave_Window_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/Microwave_Window_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Microwave_Window_Normal.png
+illum 2
+

@@ -1,0 +1,11 @@
+newmtl paperBag
+Kd 0.1959911 0.03550622 0.01735366
+illum 2
+
+newmtl TinFoil
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/MaterialPlane_DefaultMaterial_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/MaterialPlane_DefaultMaterial_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/MaterialPlane_DefaultMaterial_Normal.png
+illum 2
+

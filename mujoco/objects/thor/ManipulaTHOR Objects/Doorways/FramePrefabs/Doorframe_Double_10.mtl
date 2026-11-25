@@ -1,0 +1,6 @@
+newmtl LightWoodCounters2
+Kd 0.764151 0.5173546 0.2991723
+map_Kd ExportedThorAssets/Textures/LightWoodCounters.jpg
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

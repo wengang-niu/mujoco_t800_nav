@@ -1,0 +1,12 @@
+newmtl RoboTHOR_Ceiling_Mat
+Kd 1 1 1
+map_Kd Assets/ThorAssets/Textures/RoboTHOR_Ceiling_AlbedoTransparency.jpg
+illum 2
+
+newmtl RoboTHOR_Ceiling_Vent_Mat
+Kd 1 1 1
+map_Kd Assets/ThorAssets/Textures/BrushedIron_AlbedoTransparency.png
+map_Ks Assets/ThorAssets/Textures/BrushedIron_None_MetallicSmoothness.png
+map_Bump Assets/ThorAssets/Textures/BrushedIron_Normal.png
+illum 2
+

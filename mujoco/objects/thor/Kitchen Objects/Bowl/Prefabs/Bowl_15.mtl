@@ -1,0 +1,11 @@
+newmtl Bowl_Mat6 (Plastic - UB)
+Kd 0.2882785 0.3102404 0.4558824
+map_Bump ExportedThorAssets/Textures/BrushedIron_Normal.png
+illum 2
+
+newmtl Bowl_Decals_Off_Mat
+Kd 1 1 1
+Tr 1
+d 0
+illum 2
+

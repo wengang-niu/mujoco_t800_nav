@@ -1,0 +1,22 @@
+newmtl HousePlant_Pot_Primary1_Mat
+Kd 0.5735294 0.2423123 0.05903978
+map_Kd ExportedThorAssets/Textures/Carpet1.JPG
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl HousePlant_Pot_Secondary1_Mat
+Kd 0.007352948 0.007352948 0.007352948
+illum 2
+
+newmtl HousePlant_Leaves4A_Mat
+Kd 0.8839757 1 0.6176471
+map_Kd ExportedThorAssets/Textures/BasilPlant_DefaultMaterial_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/BasilPlant_DefaultMaterial_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/BasilPlant_DefaultMaterial_Normal.png
+illum 2
+
+newmtl HousePlant_Misc1_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/PottingSoil.png
+illum 2
+

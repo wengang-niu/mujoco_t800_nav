@@ -1,0 +1,32 @@
+newmtl Pot_Primary1_Mat (Steel)
+Kd 0.5955882 0.5955882 0.5955882
+map_Ks ExportedThorAssets/Textures/SteelMetallic2.png
+map_Bump ExportedThorAssets/Textures/SteelNRM.png
+illum 2
+
+newmtl Pot_Secondary5_Mat (Silver)
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/BrushedIron_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/Copper_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Copper_Normal.png
+illum 2
+
+newmtl Pot_Detail_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/BrushedIron_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/BrushedAluminum_MetallicSmoothness.png
+illum 2
+
+newmtl Pot_Glass_Mat
+Kd 0.7867647 0.7867647 0.7867647
+Tr 0.566
+d 0.434
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Pot_Pan_Decals_Off_Mat
+Kd 1 1 1
+Tr 1
+d 0
+illum 2
+

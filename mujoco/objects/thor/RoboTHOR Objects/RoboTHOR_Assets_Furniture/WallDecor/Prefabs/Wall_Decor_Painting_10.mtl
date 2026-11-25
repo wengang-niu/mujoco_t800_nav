@@ -1,0 +1,14 @@
+newmtl 1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg
+illum 2
+
+newmtl AlanTuringPaper
+Kd 0.8 0.8 0.8
+illum 2
+
+newmtl Cream_wood
+Kd 1 0.9779412 0.9779412
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

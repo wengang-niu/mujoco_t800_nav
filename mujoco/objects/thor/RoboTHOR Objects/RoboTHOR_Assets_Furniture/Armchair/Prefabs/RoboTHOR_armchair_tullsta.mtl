@@ -1,0 +1,11 @@
+newmtl RoboTHOR_Armchair_Tullsta_Fabric_Mat
+Kd 0.8113208 0.8047602 0.7998399
+map_Kd ExportedThorAssets/Textures/Fabric2_AlbedoTransparency.jpg
+map_Bump ExportedThorAssets/Textures/Fabric2_Normal.jpg
+illum 2
+
+newmtl WoodGrain_Tan
+Kd 0.9150943 0.7194251 0.4791296
+map_Kd ExportedThorAssets/Textures/WoodGrains1.jpg
+illum 2
+

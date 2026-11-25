@@ -1,0 +1,23 @@
+newmtl RoboTHOR_Sofa_Kramfors_Fabric_Mat
+Kd 0.3137255 0.1647059 0.1137255
+map_Bump ExportedThorAssets/Textures/Noise1NRM.tga
+illum 2
+
+newmtl FittedSheet1AO
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/FittedSheet1AO.png
+map_Bump ExportedThorAssets/Textures/FittedSheet1NRM.png
+illum 2
+
+newmtl Bedsheet_Unmade_30A_Mat
+Kd 0.6156863 0.5490196 0.3372549
+map_Kd ExportedThorAssets/Textures/FabricPattern.jpg
+map_Bump ExportedThorAssets/Textures/Bedsheet_Unmade_4_Normal.png
+illum 2
+
+newmtl Bedsheet_Unmade_30B_Mat
+Kd 0.2588235 0.2588235 0.2588235
+map_Kd ExportedThorAssets/Textures/ClothEmis.tif
+map_Bump ExportedThorAssets/Textures/Bedsheet_Unmade_3_Normal.png
+illum 2
+

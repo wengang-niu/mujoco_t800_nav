@@ -1,0 +1,27 @@
+newmtl BaseboardMat.005
+Kd 0.6 0.6 0.6
+illum 2
+
+newmtl Carpet9
+Kd 0.5220588 0.4759948 0.4759948
+map_Kd ExportedThorAssets/Textures/Carpet1.JPG
+map_Kd ExportedThorAssets/Textures/TexturesCom_FabricPlain0072_seamless_albedo_S.png
+map_Bump ExportedThorAssets/Textures/Carpet1NRM.tga
+illum 2
+
+newmtl FittedSheet1AO
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/FittedSheet1AO.png
+map_Bump ExportedThorAssets/Textures/FittedSheet1NRM.png
+illum 2
+
+newmtl Bedsheet_Unmade_23A_Mat
+Kd 1 1 1
+map_Bump ExportedThorAssets/Textures/Bedsheet_Unmade_1_Normal.png
+illum 2
+
+newmtl Bedsheet_Unmade_23B_Mat
+Kd 0.8666667 0.8039216 0.8352941
+map_Bump ExportedThorAssets/Textures/Bedsheet_Unmade_6_Normal.png
+illum 2
+

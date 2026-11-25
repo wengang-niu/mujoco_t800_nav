@@ -1,0 +1,22 @@
+newmtl LightWoodCounters3
+Kd 0.6981132 0.3393635 0.1350124
+map_Kd ExportedThorAssets/Textures/LightWoodCounters.jpg
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl No Name SourceFiles
+Kd 1 1 1
+illum 2
+
+newmtl Bedsheet_Unmade_4_U_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/BedroomBlanket2.png
+map_Bump ExportedThorAssets/Textures/Bedsheet_Unmade_10_Normal.png
+illum 2
+
+newmtl Bedsheet_Unmade_4_L_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/BedroomBlanket2.png
+map_Bump ExportedThorAssets/Textures/Bedsheet_Unmade_9_Normal.png
+illum 2
+

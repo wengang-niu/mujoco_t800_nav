@@ -1,0 +1,5 @@
+newmtl RoboTHOR_Desk_Lisabo_Wood_Mat
+Kd 0.832 0.722176 0.65728
+map_Kd ExportedThorAssets/Textures/WoodGrains1.jpg
+illum 2
+

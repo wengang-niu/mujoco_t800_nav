@@ -1,0 +1,11 @@
+newmtl LightWoodCounters2
+Kd 0.764151 0.5173546 0.2991723
+map_Kd iTHOR/Textures/LightWoodCounters.jpg
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl DarkWoodSmooth
+Kd 0.245283 0.1689213 0.1137255
+map_Kd iTHOR/Textures/WoodGrains1.jpg
+illum 2
+

@@ -1,0 +1,7 @@
+newmtl Tomato2_Mat1
+Kd 1 0.5147059 0.5147059
+map_Kd ExportedThorAssets/Textures/Tomato2_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/Tomato2_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Tomato2_Normal.png
+illum 2
+

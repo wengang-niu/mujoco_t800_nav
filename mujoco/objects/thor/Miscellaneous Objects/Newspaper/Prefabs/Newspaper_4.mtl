@@ -1,0 +1,5 @@
+newmtl Paper5 Newspapers
+Kd 0.8970588 0.8524788 0.8047146
+map_Kd ExportedThorAssets/Textures/Paper5.png
+illum 2
+

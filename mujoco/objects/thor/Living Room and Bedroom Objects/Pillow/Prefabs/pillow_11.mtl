@@ -1,0 +1,5 @@
+newmtl Pillow11_Mat
+Kd 1 1 1
+map_Bump ExportedThorAssets/Textures/PillowD_Normal.png
+illum 2
+

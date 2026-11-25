@@ -1,0 +1,18 @@
+newmtl TexturesCom_WoodFine0050_1_seamless_S
+Kd 1 1 1
+map_Kd iTHOR/Textures/TexturesCom_WoodFine0050_1_seamless_S.png
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl DarkWoodSmooth2
+Kd 0.1226415 0.09082413 0.09082413
+map_Kd iTHOR/Textures/WoodGrains1.jpg
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl BlackPlastic
+Kd 0.1985294 0.1985294 0.1985294
+map_Ks iTHOR/Textures/FloorKitchen1Texturetest_DefaultMaterial_MetallicSmoothness.png
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+

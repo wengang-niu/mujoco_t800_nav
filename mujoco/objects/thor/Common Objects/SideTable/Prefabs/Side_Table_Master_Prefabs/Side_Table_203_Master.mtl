@@ -1,0 +1,13 @@
+newmtl DarkWoodSmooth2
+Kd 0.1226415 0.09082413 0.09082413
+map_Kd iTHOR/Textures/WoodGrains1.jpg
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl BrushedIron_AlbedoTransparency
+Kd 1 1 1
+map_Kd iTHOR/Textures/BrushedIron_AlbedoTransparency.png
+map_Ks iTHOR/Textures/BrushedIron_None_MetallicSmoothness.png
+map_Bump iTHOR/Textures/BrushedIron_Normal.png
+illum 2
+

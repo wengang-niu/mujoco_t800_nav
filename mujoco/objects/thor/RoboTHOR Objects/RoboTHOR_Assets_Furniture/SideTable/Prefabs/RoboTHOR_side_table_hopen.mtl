@@ -1,0 +1,15 @@
+newmtl RoboTHOR_Side_Table_Hopen_Wood_Mat
+Kd 0.492 0.3205328 0.26814
+map_Kd iTHOR/Textures/WoodGrains1.jpg
+illum 2
+
+newmtl RoboTHOR_Side_Table_Hopen_Plastic_Mat
+Kd 1 1 1
+map_Kd iTHOR/Textures/ScratchedPlastic_Albedo.png
+illum 2
+
+newmtl HammeredMetal_AlbedoTransparency_1
+Kd 1 1 1
+map_Kd iTHOR/Textures/HammeredMetal_AlbedoTransparency.png
+illum 2
+

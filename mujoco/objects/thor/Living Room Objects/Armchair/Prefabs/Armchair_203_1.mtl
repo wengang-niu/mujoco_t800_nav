@@ -1,0 +1,7 @@
+newmtl Sofa4_DefaultMaterial_AlbedoTransparency
+Kd 0.1017239 0.03973833 0.1544118
+map_Kd ExportedThorAssets/Textures/Sofa4_DefaultMaterial_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/Sofa4_DefaultMaterial_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Sofa4_DefaultMaterial_Normal.png
+illum 2
+

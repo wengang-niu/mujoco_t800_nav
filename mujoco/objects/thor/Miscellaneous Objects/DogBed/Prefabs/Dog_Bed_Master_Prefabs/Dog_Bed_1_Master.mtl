@@ -1,0 +1,6 @@
+newmtl DoggyBed_DefaultMaterial_AlbedoTransparency
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/DoggyBed_DefaultMaterial_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/DoggyBed_DefaultMaterial_Normal.png
+illum 2
+

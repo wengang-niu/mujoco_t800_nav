@@ -1,0 +1,7 @@
+newmtl Sink3_Secondary_Mat
+Kd 0.6838235 0.5772275 0.4173335
+map_Kd ExportedThorAssets/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

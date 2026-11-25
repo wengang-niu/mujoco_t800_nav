@@ -1,0 +1,19 @@
+newmtl BrushedIron_AlbedoTransparency
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/BrushedIron_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/BrushedIron_None_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/BrushedIron_Normal.png
+illum 2
+
+newmtl OrangePlastic
+Kd 1 0.2689655 0
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Copper_AlbedoTransparency
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/Copper_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/Copper_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Copper_Normal.png
+illum 2
+

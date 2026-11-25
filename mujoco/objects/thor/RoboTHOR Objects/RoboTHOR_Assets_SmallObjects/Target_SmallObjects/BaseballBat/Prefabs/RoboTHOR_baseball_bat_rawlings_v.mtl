@@ -1,0 +1,10 @@
+newmtl RoboTHOR_Baseball_Bat_Primary_Mat
+Kd 0.9150943 0.7194251 0.4791296
+map_Kd ExportedThorAssets/Textures/WoodGrains1.jpg
+illum 2
+
+newmtl RoboTHOR_Baseball_Bat_Decals_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/RoboTHOR_Baseball_Bat_Decals_AlbedoTransparency.png
+illum 2
+

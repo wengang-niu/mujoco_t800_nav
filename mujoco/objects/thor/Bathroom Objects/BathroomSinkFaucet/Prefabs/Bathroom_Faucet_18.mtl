@@ -1,0 +1,7 @@
+newmtl Sink2_Secondary_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/BrushedAluminum_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/BrushedAluminum_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

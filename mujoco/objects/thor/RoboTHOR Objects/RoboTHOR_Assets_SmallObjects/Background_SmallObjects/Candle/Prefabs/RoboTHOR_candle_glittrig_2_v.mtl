@@ -1,0 +1,10 @@
+newmtl RoboTHOR_Candle_Primary_Glittrig_Mat
+Kd 0.622 0.5253161 0.1192435
+map_Ks ExportedThorAssets/Textures/BrushedIron_None_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Copper_Normal.png
+illum 2
+
+newmtl RoboTHOR_Candle_Secondary_Mat
+Kd 1 0.9732252 0.8235294
+illum 2
+

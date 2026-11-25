@@ -1,0 +1,11 @@
+newmtl Sofa3_Fabric_AlbedoTransparency4
+Kd 0.5009732 0.5315636 0.6029412
+map_Ks ExportedThorAssets/Textures/Sofa3_Fabric_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Sofa3_Fabric_Normal.png
+illum 2
+
+newmtl ThrowCloth4AO
+Kd 0.6319652 0.6617647 0.1216479
+map_Bump ExportedThorAssets/Textures/ThrowCloth3NRM.png
+illum 2
+

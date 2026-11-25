@@ -1,0 +1,22 @@
+newmtl RoboTHOR_Television_Primary1_Mat
+Kd 0.0754717 0.0754717 0.0754717
+map_Kd ExportedThorAssets/Textures/PlasticBase1_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/PlasticBase2_Normal.png
+illum 2
+
+newmtl RoboTHOR_Television_Secondary1_Mat
+Kd 0.03773582 0.03773582 0.03773582
+illum 2
+
+newmtl RoboTHOR_Television_Tertiary_Mat
+Kd 0.0754717 0.0754717 0.0754717
+map_Kd ExportedThorAssets/Textures/PlasticBase1_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/PlasticBase2_Normal.png
+illum 2
+
+newmtl RoboTHOR_Television_Quaternary_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/HammeredMetal_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

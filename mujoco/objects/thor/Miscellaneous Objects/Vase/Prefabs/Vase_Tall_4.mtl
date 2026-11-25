@@ -1,0 +1,5 @@
+newmtl Porcelain_Yellow_Mat
+Kd 0.9852941 0.6911049 0.05795847
+map_Bump ExportedThorAssets/Textures/Copper_Normal.png
+illum 2
+

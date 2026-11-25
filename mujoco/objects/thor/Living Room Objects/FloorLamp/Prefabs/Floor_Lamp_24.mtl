@@ -1,0 +1,21 @@
+newmtl Metal_chrome_mat
+Kd 0.829 0.829 0.829
+illum 2
+
+newmtl Floor_Lamp_Secondary2_Mat
+Kd 0.4852941 0.4852941 0.4852941
+map_Kd ExportedThorAssets/Textures/BrushedAluminum_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/BrushedAluminum_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/BrushedIron_Normal.png
+illum 2
+
+newmtl Floor_Lamp_Shade2_Mat
+Kd 0.8962264 0.8903612 0.5707102
+map_Kd ExportedThorAssets/Textures/TexturesCom_FabricPlain0072_seamless_albedo_S.png
+map_Bump ExportedThorAssets/Textures/TexturesCom_FabricPlain0072_seamless_normal_S.png
+illum 2
+
+newmtl Floor_Lamp_Light_Mat
+Kd 5.189172 5.075967 3.842925
+illum 2
+

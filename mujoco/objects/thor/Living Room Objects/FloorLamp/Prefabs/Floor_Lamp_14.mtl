@@ -1,0 +1,20 @@
+newmtl Floor_Lamp_Primary3_Mat
+Kd 0.6764706 0.4514377 0.2785467
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Floor_Lamp_Secondary3_Mat
+Kd 0.7647059 0.7647059 0.7647059
+map_Kd ExportedThorAssets/Textures/BrushedAluminum_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/BrushedAluminum_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/BrushedIron_Normal.png
+illum 2
+
+newmtl Floor_Lamp_Shade_Patternless_Mat
+Kd 0.9245283 0.9245283 0.7021182
+illum 2
+
+newmtl Floor_Lamp_Light_Mat
+Kd 5.189172 5.075967 3.842925
+illum 2
+

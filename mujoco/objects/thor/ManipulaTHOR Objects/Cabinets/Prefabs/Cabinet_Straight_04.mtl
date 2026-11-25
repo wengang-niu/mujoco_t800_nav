@@ -1,0 +1,13 @@
+newmtl DarkWood2
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/DarkWood2.tif
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl HammeredMetal_AlbedoTransparency
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

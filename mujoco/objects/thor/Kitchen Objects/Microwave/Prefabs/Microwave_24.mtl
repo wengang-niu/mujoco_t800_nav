@@ -1,0 +1,50 @@
+newmtl Microwave_Primary2_Mat
+Kd 0.5808823 0.5808823 0.5808823
+map_Kd iTHOR/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks iTHOR/Textures/Glass3MetallicSmoothness.png
+map_Bump iTHOR/Textures/Copper_Normal.png
+illum 2
+
+newmtl Microwave_Secondary2_Mat
+Kd 0.4852941 0 0
+map_Ks iTHOR/Textures/Glass2MetallicSmoothness.png
+map_Bump iTHOR/Textures/Copper_Normal.png
+illum 2
+
+newmtl Microwave_Metal_Mat
+Kd 1 1 1
+map_Kd iTHOR/Textures/BrushedIron_AlbedoTransparency.png
+map_Ks iTHOR/Textures/BrushedIron_None_MetallicSmoothness.png
+map_Bump iTHOR/Textures/BrushedIron_Normal.png
+illum 2
+
+newmtl Microwave_Plate2_Mat
+Kd 0.3161765 0.3161765 0.3161765
+map_Ks iTHOR/Textures/Glass1MetallicSmoothness.png
+illum 2
+
+newmtl Microwave_Interior1_Mat
+Kd 1 0.7641641 0.4264706
+illum 2
+
+newmtl Microwave_Decal_Mat
+Kd 1 1 1
+map_Kd iTHOR/Textures/Microwave_Decal_AlbedoTransparency.png
+illum 2
+
+newmtl Microwave_Readout1_Off_Mat
+Kd 0 0 0
+illum 2
+
+newmtl Microwave_Plate1_Mat
+Kd 0.3030385 0.3472348 0.4338235
+map_Ks iTHOR/Textures/Glass2MetallicSmoothness.png
+illum 2
+
+newmtl Microwave_Window2_Off_Mat
+Kd 0.8529412 0.8529412 0.8529412
+Tr 0.578
+d 0.422
+map_Ks iTHOR/Textures/Glass2MetallicSmoothness.png
+illum 2
+

@@ -1,0 +1,11 @@
+newmtl RoboTHOR_Sofa_Ektorp_Fabric_Mat
+Kd 0.764151 0.764151 0.764151
+map_Kd ExportedThorAssets/Textures/Fabric2_AlbedoTransparency.jpg
+map_Bump ExportedThorAssets/Textures/Fabric2_Normal.jpg
+illum 2
+
+newmtl SMOOTHWOODWood2
+Kd 0.6323529 0.4150191 0.3394248
+map_Kd ExportedThorAssets/Textures/TexturesCom_WoodWhite1.png
+illum 2
+

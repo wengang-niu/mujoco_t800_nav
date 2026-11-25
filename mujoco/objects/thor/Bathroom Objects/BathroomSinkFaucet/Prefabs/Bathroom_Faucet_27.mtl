@@ -1,0 +1,7 @@
+newmtl Sink5_Secondary_Mat
+Kd 0.6176471 0.6176471 0.6176471
+map_Kd ExportedThorAssets/Textures/MetalBumpy_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/MetalBumpy_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/MetalBumpy_Normal.png
+illum 2
+

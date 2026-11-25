@@ -1,0 +1,14 @@
+newmtl Light_Switch_Primary1_Mat
+Kd 0.9632353 0.9632353 0.9632353
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Light_Switch_Secondary_Mat
+Kd 0.9558824 0.9558824 0.9558824
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Light_Switch_Hole_Mat
+Kd 0 0 0
+illum 2
+

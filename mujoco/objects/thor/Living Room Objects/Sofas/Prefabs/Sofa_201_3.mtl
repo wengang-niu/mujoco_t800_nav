@@ -1,0 +1,7 @@
+newmtl Sofa3_Fabric_AlbedoTransparency5
+Kd 0.2426471 0.1747826 0.1016977
+map_Kd ExportedThorAssets/Textures/transitional-upholstery-fabric1.jpg
+map_Ks ExportedThorAssets/Textures/Sofa3_Fabric_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Sofa3_Fabric_Normal.png
+illum 2
+

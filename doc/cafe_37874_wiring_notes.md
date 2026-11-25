@@ -88,14 +88,14 @@ robot 的 `biped/...` class 与场景的 `__VISUAL_MJT__` 等 class 不冲突。
 
 ## 7. 文件选择
 
-- **`train_37874_stripped.xml`** —— 当前可直接加载。与主文件差异仅 11 个缺失纹理
-  （10 个 `thor/Textures/*.png` + 1 个 `thor/SkyBox/SkySouthLakeUnion.png`）及其派生的
-  46 个关节清理，结构完全一致（nbody 528 / ngeom 4764）。
-- **`train_37874.xml`** —— 规范主文件，需补齐那 11 个 PNG 才能加载（要下 Textures 643MB +
-  SkyBox 225MB 两个包）。
-- **`train_37874_ceiling.xml`** —— 带天花板变体，未接线；启用前要做同样的去纹理和 `cafe_root` 位移。
+- **`train_37874_stripped.xml`** —— 当前唯一加载的场景文件，可直接加载。
+  相对原始主文件删减了 11 个缺失纹理（10 个 `thor/Textures/*.png` + 1 个
+  `thor/SkyBox/SkySouthLakeUnion.png`）及其派生的 46 个关节（nbody 528 / ngeom 4764）。
+- 天花板变体 `train_37874_ceiling.xml` 及其 `ceiling_*.obj` 已删除（未接线、无人引用），
+  原始主文件 `train_37874.xml` 也已删除（依赖的 Textures/SkyBox 不下载，无法加载）。
+  需要时均可从 molmospaces 重新拉取。
 - 注意：生成 `_stripped.xml` 的工具已随 `try/` 删除，该文件现在是**冻结产物**。
-  若将来补全纹理，直接用 `train_37874.xml` 即可，无需重新剥离。
+  若将来补全纹理，可从 molmospaces 拉回原始主文件。
 
 ## 8. 其它
 

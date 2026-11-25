@@ -1,0 +1,13 @@
+newmtl LightWoodCounters3
+Kd 0.6981132 0.3393635 0.1350124
+map_Kd ExportedThorAssets/Textures/LightWoodCounters.jpg
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Glass_Detailed_Tinted_Mat
+Kd 0.5647059 0.5647059 0.5647059
+Tr 1
+d 0
+map_Ks ExportedThorAssets/Textures/Glass2MetallicSmoothness.png
+illum 2
+

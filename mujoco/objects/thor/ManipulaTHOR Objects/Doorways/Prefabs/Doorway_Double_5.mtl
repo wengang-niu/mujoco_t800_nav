@@ -1,0 +1,23 @@
+newmtl WoodFloorsCross
+Kd 1 0.9362069 0.7279412
+map_Kd ExportedThorAssets/Textures/CrossHatchWood.jpg
+map_Bump ExportedThorAssets/Textures/CrossHatchWoodNRM.jpg
+illum 2
+
+newmtl Glass_Detailed_Frosted_Mat
+Kd 0.4779412 0.4779412 0.4779412
+Tr 1
+d 0
+map_Ks ExportedThorAssets/Textures/Glass2MetallicSmoothness.png
+illum 2
+
+newmtl WhiteMetal
+Kd 1 1 1
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl WoodGrain_Brown
+Kd 0.572549 0.3843138 0.2588235
+map_Kd ExportedThorAssets/Textures/WoodGrains1.jpg
+illum 2
+

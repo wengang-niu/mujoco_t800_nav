@@ -1,0 +1,20 @@
+newmtl GreyFloor 2
+Kd 0.5543629 0.5588235 0.4560986
+illum 2
+
+newmtl FittedSheet1AO 2
+Kd 0.4246323 0.6333393 0.875
+map_Kd ExportedThorAssets/Textures/FittedSheet1AO.png
+map_Bump ExportedThorAssets/Textures/FittedSheet1NRM.png
+illum 2
+
+newmtl Bedsheet_Unmade_14A_Mat
+Kd 0.2627451 0.3843137 0.5647059
+map_Bump ExportedThorAssets/Textures/Bedsheet_Unmade_9_Normal.png
+illum 2
+
+newmtl Bedsheet_Unmade_14B_Mat
+Kd 0.4235294 0.6352941 0.8745098
+map_Bump ExportedThorAssets/Textures/Bedsheet_Unmade_8_Normal.png
+illum 2
+

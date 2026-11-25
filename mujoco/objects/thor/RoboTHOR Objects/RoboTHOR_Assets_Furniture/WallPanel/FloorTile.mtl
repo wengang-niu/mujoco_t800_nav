@@ -1,0 +1,6 @@
+newmtl RoboTHOR_Carpet_Mat
+Kd 0.1792453 0.1614899 0.1614899
+map_Kd Assets/ThorAssets/Textures/RoboTHOR_Carpet_AlbedoTransparency.jpg
+map_Bump Assets/ThorAssets/Textures/RoboTHOR_Carpet_Normal.jpg
+illum 2
+

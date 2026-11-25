@@ -1,0 +1,28 @@
+newmtl BlackPlastic
+Kd 0.1985294 0.1985294 0.1985294
+map_Ks ExportedThorAssets/Textures/FloorKitchen1Texturetest_DefaultMaterial_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl OrangePlastic
+Kd 1 0.2689655 0
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl StainlessSteel
+Kd 0.6176471 0.6176471 0.6176471
+map_Ks ExportedThorAssets/Textures/SteelMetallic2.png
+map_Bump ExportedThorAssets/Textures/SteelNRM.png
+illum 2
+
+newmtl WhitePlastic
+Kd 1 1 1
+illum 2
+
+newmtl HammeredMetal_AlbedoTransparency
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

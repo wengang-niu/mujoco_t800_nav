@@ -1,0 +1,19 @@
+newmtl TexturesCom_WoodFine0050_1_seamless_S_rich
+Kd 0.5294118 0.307526 0.307526
+map_Kd iTHOR/Textures/TexturesCom_WoodFine0050_1_seamless_S.png
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl BrushedIron_AlbedoTransparency
+Kd 1 1 1
+map_Kd iTHOR/Textures/BrushedIron_AlbedoTransparency.png
+map_Ks iTHOR/Textures/BrushedIron_None_MetallicSmoothness.png
+map_Bump iTHOR/Textures/BrushedIron_Normal.png
+illum 2
+
+newmtl LightWoodCounters3
+Kd 0.6981132 0.3393635 0.1350124
+map_Kd iTHOR/Textures/LightWoodCounters.jpg
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+

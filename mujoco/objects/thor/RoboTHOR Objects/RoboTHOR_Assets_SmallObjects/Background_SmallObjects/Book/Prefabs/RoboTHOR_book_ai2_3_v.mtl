@@ -1,0 +1,22 @@
+newmtl RoboTHOR_Book_Cover_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/RoboTHOR_Book_Cover_AlbedoTransparency.jpg
+illum 2
+
+newmtl Book_Pages_2_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/Book_Pages_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/Book_Pages_Normal.png
+illum 2
+
+newmtl Book_Text_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/Book_Text_AlbedoTransparency.png
+illum 2
+
+newmtl Book_Pages_1_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/Book_Pages_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/Book_Pages_Normal.png
+illum 2
+

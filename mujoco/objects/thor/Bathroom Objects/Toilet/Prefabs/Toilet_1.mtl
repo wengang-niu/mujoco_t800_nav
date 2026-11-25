@@ -1,0 +1,7 @@
+newmtl Toilet1_DefaultMaterial_AlbedoTransparency
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/Toilet1_DefaultMaterial_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/Toilet1_DefaultMaterial_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Toilet1_DefaultMaterial_Normal.png
+illum 2
+

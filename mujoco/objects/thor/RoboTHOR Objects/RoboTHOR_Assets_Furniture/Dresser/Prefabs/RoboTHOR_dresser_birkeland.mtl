@@ -1,0 +1,12 @@
+newmtl RoboTHOR_Desk_Birkeland_Wood_White_Mat
+Kd 0.8220452 0.8329788 0.8584906
+map_Kd iTHOR/Textures/WoodGrains2.jpg
+illum 2
+
+newmtl HammeredMetal_AlbedoTransparency
+Kd 1 1 1
+map_Kd iTHOR/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks iTHOR/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+

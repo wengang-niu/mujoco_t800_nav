@@ -1,0 +1,5 @@
+newmtl Paper3 Newspapers
+Kd 0.7941176 0.6616304 0.5196799
+map_Kd ExportedThorAssets/Textures/Paper3.png
+illum 2
+

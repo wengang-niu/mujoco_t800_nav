@@ -1,0 +1,22 @@
+newmtl Floor_Lamp_Primary3_Mat
+Kd 0.6764706 0.4514377 0.2785467
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Floor_Lamp_Secondary3_Mat
+Kd 0.7647059 0.7647059 0.7647059
+map_Kd iTHOR/Textures/BrushedAluminum_AlbedoTransparency.png
+map_Ks iTHOR/Textures/BrushedAluminum_MetallicSmoothness.png
+map_Bump iTHOR/Textures/BrushedIron_Normal.png
+illum 2
+
+newmtl Floor_Lamp_Shade3_Mat
+Kd 1 0.7127165 0.4481132
+map_Kd iTHOR/Textures/TexturesCom_FabricPlain0072_seamless_albedo_S.png
+map_Bump iTHOR/Textures/TexturesCom_FabricPlain0072_seamless_normal_S.png
+illum 2
+
+newmtl Floor_Lamp_Light_Mat
+Kd 5.189172 5.075967 3.842925
+illum 2
+

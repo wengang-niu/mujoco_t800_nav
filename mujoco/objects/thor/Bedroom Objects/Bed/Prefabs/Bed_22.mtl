@@ -1,0 +1,27 @@
+newmtl DarkWoodSmooth2
+Kd 0.1226415 0.09082413 0.09082413
+map_Kd ExportedThorAssets/Textures/WoodGrains1.jpg
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Carpet6
+Kd 1 0.7869486 0.5514706
+map_Kd ExportedThorAssets/Textures/Carpet1.JPG
+map_Bump ExportedThorAssets/Textures/Carpet1NRM.tga
+illum 2
+
+newmtl No Name SourceFiles
+Kd 1 1 1
+illum 2
+
+newmtl Bedsheet_Made_22A_Mat
+Kd 0.2705882 0.2117647 0.1333333
+map_Kd ExportedThorAssets/Textures/FabricPattern.jpg
+map_Bump ExportedThorAssets/Textures/Bedsheet_Made_2_Normal.png
+illum 2
+
+newmtl Bedsheet_Made_22B_Mat
+Kd 1 1 1
+map_Bump ExportedThorAssets/Textures/Bedsheet_Made_4_Normal.png
+illum 2
+

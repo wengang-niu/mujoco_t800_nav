@@ -1,0 +1,6 @@
+newmtl Ottoman_default.002_AlbedoTransparency
+Kd 0.4779412 0.3893815 0.3303417
+map_Kd ExportedThorAssets/Textures/Ottoman_default.002_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/Ottoman_default.002_Normal.png
+illum 2
+

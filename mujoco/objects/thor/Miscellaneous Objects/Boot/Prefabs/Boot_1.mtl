@@ -1,0 +1,7 @@
+newmtl Boots_Boots_AlbedoTransparency
+Kd 0.7647059 0.566782 0.4385813
+map_Kd ExportedThorAssets/Textures/Boots_Boots_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/Boots_Boots_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Boots_Boots_Normal.png
+illum 2
+

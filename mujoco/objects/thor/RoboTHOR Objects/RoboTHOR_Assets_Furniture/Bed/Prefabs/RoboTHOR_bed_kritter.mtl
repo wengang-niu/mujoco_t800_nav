@@ -1,0 +1,26 @@
+newmtl RoboTHOR_Bed_Kritter_Blue_Mat
+Kd 0.6980392 0.8784314 0.9686275
+map_Kd ExportedThorAssets/Textures/TexturesCom_WoodWhite.png
+illum 2
+
+newmtl RoboTHOR_Bed_Kritter_Purple_Mat
+Kd 0.3843138 0 0.4156863
+map_Kd ExportedThorAssets/Textures/TexturesCom_WoodWhite.png
+illum 2
+
+newmtl RoboTHOR_Bed_Kritter_Wood_Mat
+Kd 0.8666667 0.7294118 0.5215687
+map_Kd ExportedThorAssets/Textures/TexturesCom_WoodWhite.png
+illum 2
+
+newmtl RoboTHOR_Bed_Kritter_Blanket_Mat
+Kd 1 1 1
+map_Bump ExportedThorAssets/Textures/ClothNRM.png
+illum 2
+
+newmtl Mattress1AO
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/Mattress1AO.png
+map_Bump ExportedThorAssets/Textures/Mattress1NRM.png
+illum 2
+

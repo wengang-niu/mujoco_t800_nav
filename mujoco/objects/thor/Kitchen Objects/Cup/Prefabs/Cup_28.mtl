@@ -1,0 +1,11 @@
+newmtl Cup5_Mat (Plastic - UB)
+Kd 0.1617647 0.1617647 0.1617647
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Cup_Decals_Off_Mat
+Kd 1 1 1
+Tr 1
+d 0
+illum 2
+

@@ -1,0 +1,8 @@
+newmtl Wax2
+Kd 0.7768763 1 0.7058823
+illum 2
+
+newmtl Charcol
+Kd 0.2867647 0.2867647 0.2867647
+illum 2
+

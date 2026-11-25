@@ -13,10 +13,17 @@ source/
   policy.py        # MnnPolicy（MNN 加载与推理）
   config.py        # 读 YAML → numpy 配置对象
 config/
-  t800.yaml        # 全部可调参数（关节/PD/观测缩放/时序/按键）
+  t800.yaml        # 全部可调参数（关节/PD/观测缩放/时序/按键/出生点）
 model/             # MNN 行走策略（22 关节）
-mujoco/            # MuJoCo 模型（t800.xml + robot + environment）
-doc/               # 文档配图
+mujoco/
+  t800.xml         # 顶层模型：robot + 场景
+  robot/           # T800 MJCF + mesh + 贴图
+  scenes/          # 场景（cafe_37874 咖啡馆）
+  objects/         # 场景家具资源（2.5GB，gitignore，用 tools/ 重建）
+  environment/     # 备用平地场景 ground.xml
+tools/
+  fetch_scene_assets.py   # 重新拉取 mujoco/objects/ 大体积资源
+doc/               # 文档配图 + 场景备忘
 ```
 
 ## 环境
@@ -52,7 +59,7 @@ python source/main.py --config path/to/other.yaml   # 换配置
 
 ## 算法数据流
 
-![flow](doc/step_flow.png)
+![flow](doc/flow.png)
 
 每 `control_dt`（0.01 s）一轮：`观测(72,) → 15 帧历史 → full(1083,) → 策略 → action(22,) → 目标角 → PD → mj_step×5`
 
@@ -63,7 +70,25 @@ python source/main.py --config path/to/other.yaml   # 换配置
 - `observation`：各观测分量缩放与截断、历史帧数
 - `teleop`：按键步长、限幅、软启动
 - `timing`：控制/仿真周期
+- `reset`：出生点 `base_pos`（x,y）与高度 `base_z` —— 由场景决定，换场景时改这里
+
+## 场景
+
+当前场景是咖啡馆 `mujoco/scenes/cafe_37874/`（sales floor 128㎡ + bakery kitchen 等），
+俯视图见 `doc/cafe_37874_topdown.png`，接线细节见 `doc/cafe_37874_wiring_notes.md`。
+
+- 实际加载的是 `train_37874_stripped.xml`（已删减缺失纹理的引用，可直接加载）。
+- `mujoco/objects/`（2.5GB）不入版本库，缺资源时重建：
+
+  ```bash
+  python tools/fetch_scene_assets.py cafe_37874
+  ```
+
+- 换回平地：`mujoco/t800.xml` 里把场景 include 换成 `environment/ground.xml`，
+  并把 `reset.base_pos` 改回 `[0.0, 0.0]`。
+  注意两者不能同时 include（都定义了 `geom name="floor"`，重名会加载失败）。
 
 ## 资产来源
 
-机器人 MJCF / mesh 来自 [engineai-robotics/engineai_robotics_native_sdk](https://github.com/engineai-robotics/engineai_robotics_native_sdk)（仅保留 T800 所需子集）。
+- 机器人 MJCF / mesh 来自 [engineai-robotics/engineai_robotics_native_sdk](https://github.com/engineai-robotics/engineai_robotics_native_sdk)（仅保留 T800 所需子集）。
+- 咖啡馆场景来自 [allenai/molmospaces](https://huggingface.co/datasets/allenai/molmospaces)（holodeck-objaverse-train `train_37874`，CC-BY-4.0 / ODC-BY）。

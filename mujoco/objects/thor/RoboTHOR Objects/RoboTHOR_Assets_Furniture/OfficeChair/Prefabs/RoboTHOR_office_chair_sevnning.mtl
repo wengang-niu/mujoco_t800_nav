@@ -1,0 +1,17 @@
+newmtl RoboTHOR_Office_Chair_Sevnning_Fabric_Mat
+Kd 0.4313726 0.4313726 0.4666667
+map_Kd ExportedThorAssets/Textures/Fabric1_AlbedoTransparency.jpg
+illum 2
+
+newmtl BlackPlastic
+Kd 0.1985294 0.1985294 0.1985294
+map_Ks ExportedThorAssets/Textures/FloorKitchen1Texturetest_DefaultMaterial_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl MaroonPlasticScratched
+Kd 0.2794118 0.1511544 0.1294334
+map_Kd ExportedThorAssets/Textures/MaterialPlane_DefaultMaterial_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

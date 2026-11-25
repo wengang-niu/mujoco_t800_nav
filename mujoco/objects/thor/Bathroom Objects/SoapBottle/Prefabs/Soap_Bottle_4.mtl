@@ -1,0 +1,26 @@
+newmtl Soap_Bottle_Primary4_Mat
+Kd 0.504109 0.5236845 0.6176471
+Tr 0.572549
+d 0.427451
+map_Ks ExportedThorAssets/Textures/Glass2MetallicSmoothness.png
+illum 2
+
+newmtl Soap_Bottle_Secondary4_Mat
+Kd 0.3921569 0.254902 0
+map_Ks ExportedThorAssets/Textures/BrushedIron_None_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Copper_Normal.png
+illum 2
+
+newmtl Soap_Bottle_Tube_Mat
+Kd 0.6691177 0.6691177 0.6691177
+Tr 1
+d 0
+illum 2
+
+newmtl Soap_Bottle_Filling1_mat
+Kd 0.1665225 0.5277532 0.6470588
+Tr 0.584
+d 0.416
+map_Bump ExportedThorAssets/Textures/Fridge.tga
+illum 2
+

@@ -1,0 +1,5 @@
+newmtl Pillow7_Mat
+Kd 0.1214858 0.4288906 0.7867647
+map_Bump ExportedThorAssets/Textures/PillowC_Normal.png
+illum 2
+

@@ -14,15 +14,8 @@ import pathlib
 import sys
 import time
 
-try:
-    import mujoco
-    import mujoco.viewer  # 需显式导入，否则 mujoco.viewer 不存在
-except ImportError:
-    raise SystemExit(
-        "缺少 mujoco。请先激活 t800 环境再运行：\n"
-        "  conda activate t800 && python source/main.py\n"
-        "或：/home/root123/software/miniforge3/envs/t800/bin/python source/main.py"
-    )
+import mujoco
+import mujoco.viewer  # 需显式导入，否则 mujoco.viewer 不存在
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from config import load_config            # noqa: E402

@@ -1,0 +1,6 @@
+newmtl Chair_default.001_AlbedoTransparency
+Kd 0.1080234 0.1323529 0.1080234
+map_Kd ExportedThorAssets/Textures/Chair_default.001_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/Chair_default.001_Normal.png
+illum 2
+

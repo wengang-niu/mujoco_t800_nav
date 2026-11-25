@@ -1,0 +1,25 @@
+newmtl ArmChair2FrameMatVar4
+Kd 0.8455882 0.7172921 0
+map_Kd ExportedThorAssets/Textures/ArmChair2_CouchFrameMat_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/ArmChair2_CouchFrameMat_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/ArmChair2_CouchFrameMat_Normal.png
+illum 2
+
+newmtl Metal_chrome_mat
+Kd 0.829 0.829 0.829
+illum 2
+
+newmtl ArmChair2CushionsMatVar4
+Kd 0.8431373 0.7137255 0
+map_Kd ExportedThorAssets/Textures/ArmChair2_CouchCushionsMat_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/ArmChair2_CouchCushionsMat_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/ArmChair2_CouchCushionsMat_Normal.png
+illum 2
+
+newmtl ArmChair2CushionsMatVar2
+Kd 0.2666667 0.1058824 0
+map_Kd ExportedThorAssets/Textures/ArmChair2_CouchCushionsMat_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/ArmChair2_CouchCushionsMat_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/ArmChair2_CouchCushionsMat_Normal.png
+illum 2
+

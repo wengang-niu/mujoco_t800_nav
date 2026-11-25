@@ -1,0 +1,5 @@
+newmtl FridgePlastic
+Kd 1 1 1
+map_Bump ExportedThorAssets/Textures/Fridge.tga
+illum 2
+

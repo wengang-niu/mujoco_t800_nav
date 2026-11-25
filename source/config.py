@@ -6,14 +6,7 @@ from dataclasses import dataclass
 
 import numpy as np
 
-try:
-    import yaml
-except ImportError:  # 缺依赖时给出可操作的提示，而不是裸 traceback
-    raise SystemExit(
-        "缺少 PyYAML。请先激活 t800 环境再运行：\n"
-        "  conda activate t800 && python source/main.py\n"
-        "或：/home/root123/software/miniforge3/envs/t800/bin/python source/main.py"
-    )
+import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DEFAULT_CONFIG_PATH = ROOT / "config" / "t800.yaml"

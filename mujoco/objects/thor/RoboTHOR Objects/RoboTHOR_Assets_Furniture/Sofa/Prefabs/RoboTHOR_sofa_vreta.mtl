@@ -1,0 +1,10 @@
+newmtl RoboTHOR_Sofa_Vreta_Fabric_Mat
+Kd 0.8745099 0.8117648 0.7176471
+map_Kd ExportedThorAssets/Textures/Fabric1_AlbedoTransparency.jpg
+illum 2
+
+newmtl DarkWoodSmooth
+Kd 0.245283 0.1689213 0.1137255
+map_Kd ExportedThorAssets/Textures/WoodGrains1.jpg
+illum 2
+

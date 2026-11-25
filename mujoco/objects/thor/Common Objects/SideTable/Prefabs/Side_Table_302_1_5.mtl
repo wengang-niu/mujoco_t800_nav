@@ -1,0 +1,20 @@
+newmtl LightWoodCounters3
+Kd 0.6981132 0.3393635 0.1350124
+map_Kd iTHOR/Textures/LightWoodCounters.jpg
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl HammeredMetal_AlbedoTransparency
+Kd 1 1 1
+map_Kd iTHOR/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks iTHOR/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl HammeredMetal_Dark
+Kd 0.2647059 0.2647059 0.2647059
+map_Kd iTHOR/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks iTHOR/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+

@@ -1,0 +1,18 @@
+newmtl Couch2FrameMatVar7
+Kd 0.09803922 0.03921569 0.1529412
+map_Kd ExportedThorAssets/Textures/Couch2_CouchFrameMat_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/Couch2_CouchFrameMat_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Couch2_CouchFrameMat_Normal.png
+illum 2
+
+newmtl CouchLegsMat
+Kd 0.6 0.6 0.6
+illum 2
+
+newmtl Couch2CushionsMatVar4
+Kd 0.09803922 0.03921569 0.1529412
+map_Kd ExportedThorAssets/Textures/Couch2_CouchCushionsMat_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/Couch2_CouchCushionsMat_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Couch2_CouchCushionsMat_Normal.png
+illum 2
+

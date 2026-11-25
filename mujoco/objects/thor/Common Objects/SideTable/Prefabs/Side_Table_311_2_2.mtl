@@ -1,0 +1,15 @@
+newmtl GreyFloor 2
+Kd 0.5543629 0.5588235 0.4560986
+illum 2
+
+newmtl Metal_chrome_mat
+Kd 0.829 0.829 0.829
+illum 2
+
+newmtl HammeredMetal_Dark
+Kd 0.2647059 0.2647059 0.2647059
+map_Kd iTHOR/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks iTHOR/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+

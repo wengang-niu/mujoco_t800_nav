@@ -1,0 +1,9 @@
+newmtl Cream_wood
+Kd 1 0.9779412 0.9779412
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl MetalMat4
+Kd 0.5607396 0.4945129 0.266638
+illum 2
+

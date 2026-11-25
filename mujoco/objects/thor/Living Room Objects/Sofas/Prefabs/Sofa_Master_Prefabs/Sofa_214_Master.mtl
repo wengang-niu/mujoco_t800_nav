@@ -1,0 +1,6 @@
+newmtl Sofa_default.003_AlbedoTransparencyBlack
+Kd 0.1323529 0.1323529 0.1323529
+map_Kd ExportedThorAssets/Textures/Sofa_default.003_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/Sofa_default.003_Normal.png
+illum 2
+

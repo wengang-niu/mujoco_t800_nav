@@ -1,0 +1,16 @@
+newmtl Wall_Decor_Painting_2_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/Wall_Decor_Painting_2_AlbedoTransparency.png
+illum 2
+
+newmtl DarkWood2
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/DarkWood2.tif
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Cream_wood
+Kd 1 0.9779412 0.9779412
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

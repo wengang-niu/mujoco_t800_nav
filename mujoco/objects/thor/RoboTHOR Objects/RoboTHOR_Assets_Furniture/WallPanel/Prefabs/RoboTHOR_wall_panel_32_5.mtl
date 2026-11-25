@@ -1,0 +1,10 @@
+newmtl RoboTHOR_Wall_Panel_Fabric_Mat
+Kd 0.9150943 0.9150943 0.9150943
+illum 2
+
+newmtl RoboTHOR_Wall_Panel_Beam_Mat
+Kd 0.1985294 0.1985294 0.1985294
+map_Ks Assets/ThorAssets/Textures/FloorKitchen1Texturetest_DefaultMaterial_MetallicSmoothness.png
+map_Bump Assets/ThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

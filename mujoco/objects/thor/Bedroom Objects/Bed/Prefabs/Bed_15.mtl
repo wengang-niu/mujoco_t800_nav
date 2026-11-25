@@ -1,0 +1,27 @@
+newmtl WornWood
+Kd 0.5147059 0.3911974 0.1703071
+map_Kd ExportedThorAssets/Textures/TexturesCom_WornWood2_albedo_S.png
+illum 2
+
+newmtl DarkWoodPlanks
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/DarkWoodPlanks.jpg
+illum 2
+
+newmtl FittedSheet1AO
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/FittedSheet1AO.png
+map_Bump ExportedThorAssets/Textures/FittedSheet1NRM.png
+illum 2
+
+newmtl Bedsheet_Made_15A_Mat
+Kd 0.6156863 0.5490196 0.3372549
+map_Kd ExportedThorAssets/Textures/FabricPattern.jpg
+map_Bump ExportedThorAssets/Textures/Bedsheet_Made_1_Normal.png
+illum 2
+
+newmtl Bedsheet_Made_15B_Mat
+Kd 0.3176471 0.2313726 0.1254902
+map_Bump ExportedThorAssets/Textures/Bedsheet_Made_2_Normal.png
+illum 2
+

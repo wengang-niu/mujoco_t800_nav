@@ -1,0 +1,5 @@
+newmtl RoboTHOR_Chair_Norden_Gateleg_Wood_Mat
+Kd 0.2230588 0.224 0.224
+map_Kd ExportedThorAssets/Textures/WoodGrains4.jpg
+illum 2
+

@@ -1,0 +1,11 @@
+newmtl Sofa_default.003_AlbedoTransparency
+Kd 0.4632353 0.3712695 0.3099589
+map_Kd ExportedThorAssets/Textures/Sofa_default.003_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/Sofa_default.003_Normal.png
+illum 2
+
+newmtl BlackFabirc
+Kd 0.02897924 0.04029949 0.05882353
+map_Bump ExportedThorAssets/Textures/Carpet1NRM.tga
+illum 2
+

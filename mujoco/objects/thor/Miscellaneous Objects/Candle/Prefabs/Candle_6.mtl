@@ -1,0 +1,16 @@
+newmtl Copper_AlbedoTransparency
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/Copper_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/Copper_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Copper_Normal.png
+illum 2
+
+newmtl Wax1
+Kd 1 0.8419878 0.7205882
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Charcol
+Kd 0.2867647 0.2867647 0.2867647
+illum 2
+

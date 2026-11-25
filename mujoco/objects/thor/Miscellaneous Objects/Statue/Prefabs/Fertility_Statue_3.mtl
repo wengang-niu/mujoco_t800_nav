@@ -1,0 +1,10 @@
+newmtl FertilityStatueAO
+Kd 1 0.9160243 0.7352941
+map_Kd ExportedThorAssets/Textures/MarbleWhiteSmooth.jpg
+map_Bump ExportedThorAssets/Textures/FertilityStatueNRM.png
+illum 2
+
+newmtl BaseboardMat
+Kd 0.113924 0.113924 0.113924
+illum 2
+

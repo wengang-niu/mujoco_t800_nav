@@ -1,0 +1,6 @@
+newmtl Pillow22_Mat
+Kd 0.1544118 0.1544118 0.1544118
+map_Kd ExportedThorAssets/Textures/FabricPattern.jpg
+map_Bump ExportedThorAssets/Textures/PillowF_Normal.png
+illum 2
+

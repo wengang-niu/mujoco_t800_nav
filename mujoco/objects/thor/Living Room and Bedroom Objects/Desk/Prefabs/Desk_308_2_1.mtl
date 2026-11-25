@@ -1,0 +1,12 @@
+newmtl SMOOTHWOODWood2
+Kd 0.6323529 0.4150191 0.3394248
+map_Kd iTHOR/Textures/TexturesCom_WoodWhite1.png
+illum 2
+
+newmtl HammeredMetal_Dark
+Kd 0.2647059 0.2647059 0.2647059
+map_Kd iTHOR/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks iTHOR/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+

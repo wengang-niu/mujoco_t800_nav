@@ -1,0 +1,8 @@
+newmtl White
+Kd 1 1 1
+illum 2
+
+newmtl METAL_Misc
+Kd 0.1959874 0.1959874 0.1959874
+illum 2
+

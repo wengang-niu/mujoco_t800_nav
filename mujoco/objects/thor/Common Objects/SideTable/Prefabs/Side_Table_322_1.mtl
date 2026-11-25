@@ -1,0 +1,14 @@
+newmtl TexturesCom_WoodFine0044_1_seamless_S
+Kd 0.9058824 0.6862745 0.4470588
+map_Kd iTHOR/Textures/TexturesCom_WoodFine0044_1_seamless_albedo_S.png
+map_Ks iTHOR/Textures/TexturesCom_WoodFine0044_1_seamless_metalsmoothness_S.png
+map_Bump iTHOR/Textures/TexturesCom_WoodFine0044_1_seamless_normal_S.png
+illum 2
+
+newmtl HammeredMetal_Dark
+Kd 0.2647059 0.2647059 0.2647059
+map_Kd iTHOR/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks iTHOR/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+

@@ -1,0 +1,22 @@
+newmtl WhiteWood1
+Kd 1 1 1
+illum 2
+
+newmtl Glass_Detailed_Tinted_Mat
+Kd 0.5647059 0.5647059 0.5647059
+Tr 1
+d 0
+map_Ks ExportedThorAssets/Textures/Glass2MetallicSmoothness.png
+illum 2
+
+newmtl GenericStainlessSteel
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/TexturesCom_Medieval Metal_albedo_S.png
+map_Ks ExportedThorAssets/Textures/Metal_generic_Metallic.png
+map_Bump ExportedThorAssets/Textures/TexturesCom_Medieval Metal_normalmap_S.png
+illum 2
+
+newmtl WhiteWoodClean
+Kd 1 1 1
+illum 2
+

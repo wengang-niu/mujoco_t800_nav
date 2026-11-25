@@ -1,0 +1,5 @@
+newmtl WoodGrain_Tan
+Kd 0.9150943 0.7194251 0.4791296
+map_Kd ExportedThorAssets/Textures/WoodGrains1.jpg
+illum 2
+

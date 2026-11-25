@@ -1,0 +1,6 @@
+newmtl WhitePlasticScratched
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/HammeredMetal_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

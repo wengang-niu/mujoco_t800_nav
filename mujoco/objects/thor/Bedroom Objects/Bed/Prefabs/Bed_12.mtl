@@ -1,0 +1,22 @@
+newmtl Carpet7
+Kd 0.1513841 0.1921651 0.2941176
+map_Kd ExportedThorAssets/Textures/Carpet2.jpg
+map_Bump ExportedThorAssets/Textures/Carpet2NRM.tga
+illum 2
+
+newmtl FittedSheet1AO
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/FittedSheet1AO.png
+map_Bump ExportedThorAssets/Textures/FittedSheet1NRM.png
+illum 2
+
+newmtl Bedsheet_Unmade_12A_Mat
+Kd 0 0.1019608 0.2117647
+map_Bump ExportedThorAssets/Textures/Bedsheet_Unmade_4_Normal.png
+illum 2
+
+newmtl Bedsheet_Unmade_12B_Mat
+Kd 0 0.2117647 0.4352941
+map_Bump ExportedThorAssets/Textures/Bedsheet_Unmade_3_Normal.png
+illum 2
+

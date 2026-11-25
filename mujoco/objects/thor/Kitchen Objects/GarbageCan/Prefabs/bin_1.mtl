@@ -1,0 +1,18 @@
+newmtl Bin_Primary1_Mat
+Kd 0.07352942 0.07352942 0.07352942
+map_Ks ExportedThorAssets/Textures/ScratchedPlastic_Albedo.png
+map_Bump ExportedThorAssets/Textures/Copper_Normal.png
+illum 2
+
+newmtl Bin_Secondary1_Mat
+Kd 0.4411765 0.4411765 0.4411765
+map_Kd ExportedThorAssets/Textures/BrushedAluminum_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/BrushedAluminum_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/BrushedIron_Normal.png
+illum 2
+
+newmtl Bin_Decal_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/Bin_Decal_AlbedoTransparency.png
+illum 2
+

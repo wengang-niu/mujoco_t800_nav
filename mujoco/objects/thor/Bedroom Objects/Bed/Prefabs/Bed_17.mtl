@@ -1,0 +1,22 @@
+newmtl HammeredMetal_Dark
+Kd 0.2647059 0.2647059 0.2647059
+map_Kd ExportedThorAssets/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl LightWoodCounters 1
+Kd 0.7169812 0.4937393 0.253649
+map_Kd ExportedThorAssets/Textures/LightWoodCounters.jpg
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl No Name SourceFiles
+Kd 1 1 1
+illum 2
+
+newmtl Bedsheet_Made_17_Mat
+Kd 0.9058824 0.8784314 0.9058824
+map_Bump ExportedThorAssets/Textures/Bedsheet_Made_3_Normal.png
+illum 2
+

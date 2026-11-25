@@ -1,0 +1,12 @@
+newmtl DarkWood2
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/DarkWood2.tif
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl FabricPattern
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/FabricPattern.jpg
+map_Bump ExportedThorAssets/Textures/ClothNRM.png
+illum 2
+

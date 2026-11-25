@@ -1,0 +1,20 @@
+newmtl BrushedIron_AlbedoTransparency
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/BrushedIron_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/BrushedIron_None_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/BrushedIron_Normal.png
+illum 2
+
+newmtl BlackPlastic
+Kd 0.1985294 0.1985294 0.1985294
+map_Ks ExportedThorAssets/Textures/FloorKitchen1Texturetest_DefaultMaterial_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Glass_Detailed_Frosted_Mat
+Kd 0.4779412 0.4779412 0.4779412
+Tr 1
+d 0
+map_Ks ExportedThorAssets/Textures/Glass2MetallicSmoothness.png
+illum 2
+

@@ -1,0 +1,6 @@
+newmtl StatueWoman1_Var1
+Kd 0.3235294 0.2188581 0.2188581
+map_Kd ExportedThorAssets/Textures/StatueWoman1_DefaultMaterial_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/StatueWoman1_DefaultMaterial_Normal.png
+illum 2
+

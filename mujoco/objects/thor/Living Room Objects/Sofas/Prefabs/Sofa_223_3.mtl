@@ -1,0 +1,7 @@
+newmtl Sofa2_Fabric_AlbedoTransparency
+Kd 0.1617647 0.1617647 0.1617647
+map_Kd ExportedThorAssets/Textures/Sofa2_Fabric_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/Sofa2_Fabric_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Sofa2_Fabric_Normal.png
+illum 2
+

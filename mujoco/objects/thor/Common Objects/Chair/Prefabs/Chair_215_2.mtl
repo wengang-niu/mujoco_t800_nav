@@ -1,0 +1,10 @@
+newmtl White
+Kd 1 1 1
+illum 2
+
+newmtl TexturesCom_WoodFine0038_1_seamless_S
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/TexturesCom_WoodFine0038_1_seamless_albedo_S.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

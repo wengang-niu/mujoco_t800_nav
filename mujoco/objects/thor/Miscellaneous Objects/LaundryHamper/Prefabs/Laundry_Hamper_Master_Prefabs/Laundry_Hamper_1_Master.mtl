@@ -1,0 +1,5 @@
+newmtl ClothPattern215Tiled
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/ClothPattern215Tiled.tga
+illum 2
+

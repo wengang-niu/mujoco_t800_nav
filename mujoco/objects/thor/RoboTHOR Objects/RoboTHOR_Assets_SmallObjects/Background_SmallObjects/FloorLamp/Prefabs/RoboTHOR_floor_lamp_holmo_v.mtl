@@ -1,0 +1,14 @@
+newmtl RoboTHOR_Floor_Lamp_Primary_Mat
+Kd 0.3235294 0.3235294 0.3235294
+illum 2
+
+newmtl RoboTHOR_Floor_Lamp_Secondary_Holmo_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/RoboTHOR_Floor_Lamp_Secondary_Holmo_AlbedoTransparency.jpg
+map_Bump ExportedThorAssets/Textures/RoboTHOR_Floor_Lamp_Secondary_Holmo_Normal.jpg
+illum 2
+
+newmtl RoboTHOR_Floor_Lamp_Tertiary_Mat
+Kd 0.754717 0.754717 0.754717
+illum 2
+

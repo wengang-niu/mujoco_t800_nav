@@ -1,0 +1,5 @@
+newmtl RoboTHOR_Bowl_Primary1_Mat
+Kd 0.8529412 0.8529412 0.8529412
+map_Bump ExportedThorAssets/Textures/Copper_Normal.png
+illum 2
+

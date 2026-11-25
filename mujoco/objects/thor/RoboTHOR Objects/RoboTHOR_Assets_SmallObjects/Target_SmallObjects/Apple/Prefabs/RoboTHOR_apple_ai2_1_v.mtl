@@ -1,0 +1,7 @@
+newmtl RoboTHOR_Apple_Primary1_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/RoboTHOR_Apple_Primary1_AlbedoTransparency.jpg
+map_Ks ExportedThorAssets/Textures/RoboTHOR_Apple_Primary_MetallicSmothness.png
+map_Bump ExportedThorAssets/Textures/RoboTHOR_Apple_Primary_Normal.jpg
+illum 2
+

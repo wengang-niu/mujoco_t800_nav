@@ -1,0 +1,17 @@
+newmtl Cellphone_2A_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/Cellphone_2A_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/Cellphone_2A_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Cellphone_2A_Normal.png
+illum 2
+
+newmtl Cellphone_Screen_Off_Mat
+Kd 0 0 0
+illum 2
+
+newmtl Cellphone_Decals_Off_Mat
+Kd 1 1 1
+Tr 1
+d 0
+illum 2
+

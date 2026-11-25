@@ -1,0 +1,5 @@
+newmtl RoboTHOR_Pencil_Primary1_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/RoboTHOR_Pencil_Primary1_AlbedoTransparency.jpg
+illum 2
+

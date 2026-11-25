@@ -1,0 +1,7 @@
+newmtl Toilet_Paper_Hanger_Primary4_Mat
+Kd 0.4926471 0.2789252 0.2789252
+map_Kd ExportedThorAssets/Textures/BrushedIron_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/BrushedAluminum_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Copper_Normal.png
+illum 2
+

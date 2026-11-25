@@ -1,0 +1,34 @@
+newmtl Alarm_Clock_Primary2_Mat
+Kd 0.4779412 0.3249127 0.2073421
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Alarm_Clock_Secondary2_Mat
+Kd 0.1816609 0.2435224 0.3088235
+map_Ks iTHOR/Textures/Glass2MetallicSmoothness.png
+map_Bump iTHOR/Textures/Copper_Normal.png
+illum 2
+
+newmtl Alarm_Clock_Metal_Mat
+Kd 0.8088235 0.8088235 0.8088235
+map_Kd iTHOR/Textures/BrushedIron_AlbedoTransparency.png
+map_Ks iTHOR/Textures/BrushedIron_None_MetallicSmoothness.png
+map_Bump iTHOR/Textures/BrushedIron_Normal.png
+illum 2
+
+newmtl Alarm_Clock_Readout1_Mat
+Kd 1 1 1
+map_Kd iTHOR/Textures/Alarm_Clock_Readout1_AlbedoTransparency.png
+illum 2
+
+newmtl alarm_clock_backup_mat
+Kd 0.5 0.5 0.5
+illum 2
+
+newmtl Alarm_Clock_Primary1_Mat
+Kd 0.9411765 0.9411765 0.9411765
+map_Kd iTHOR/Textures/BrushedIron_AlbedoTransparency.png
+map_Ks iTHOR/Textures/BrushedIron_None_MetallicSmoothness.png
+map_Bump iTHOR/Textures/BrushedIron_Normal.png
+illum 2
+

@@ -1,0 +1,12 @@
+newmtl Plate_Mat5
+Kd 0 0.2332855 0.8970588
+map_Kd ExportedThorAssets/Textures/Plate_AlbedoTransparency_2.png
+map_Bump ExportedThorAssets/Textures/Copper_Normal.png
+illum 2
+
+newmtl Plate_Decals_Off_Mat
+Kd 1 1 1
+Tr 1
+d 0
+illum 2
+

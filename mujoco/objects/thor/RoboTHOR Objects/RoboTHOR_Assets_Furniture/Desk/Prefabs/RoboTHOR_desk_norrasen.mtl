@@ -1,0 +1,11 @@
+newmtl RoboTHOR_Desk_Norrasen_Wood_Mat
+Kd 0.7490196 0.6941177 0.5764706
+map_Kd ExportedThorAssets/Textures/WoodGrains4.jpg
+illum 2
+
+newmtl RoboTHOR_Desk_Norrasen_Plastic_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/HammeredMetal_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

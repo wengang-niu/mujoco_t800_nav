@@ -1,0 +1,14 @@
+newmtl Cup1_Mat (Glass)
+Kd 0.8666667 0.8666667 0.8666667
+Tr 0.5647058
+d 0.4352941
+map_Kd ExportedThorAssets/Textures/BrushedIron_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Cup_Decals_Off_Mat
+Kd 1 1 1
+Tr 1
+d 0
+illum 2
+

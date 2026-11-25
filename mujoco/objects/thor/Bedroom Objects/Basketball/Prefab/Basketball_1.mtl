@@ -1,0 +1,6 @@
+newmtl BasketBall_BASKETBALL_AlbedoTransparency
+Kd 0.5660378 0.4063279 0.3070488
+map_Kd ExportedThorAssets/Textures/BasketBall_BASKETBALL_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/BasketBall_BASKETBALL_Normal.png
+illum 2
+

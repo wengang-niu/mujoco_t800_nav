@@ -1,0 +1,12 @@
+newmtl HammeredMetal_AlbedoTransparency
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl RoboTHOR_Sofa_Kramfors_Fabric_Mat
+Kd 0.3137255 0.1647059 0.1137255
+map_Bump ExportedThorAssets/Textures/Noise1NRM.tga
+illum 2
+

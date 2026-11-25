@@ -1,0 +1,12 @@
+newmtl Cloth_1_Mat
+Kd 0.07352942 0.06967398 0.06758219
+map_Kd ExportedThorAssets/Textures/Cloth2AO.png
+map_Bump ExportedThorAssets/Textures/Cloth2NRM.png
+illum 2
+
+newmtl Cloth_Decals_Off_Mat
+Kd 1 1 1
+Tr 1
+d 0
+illum 2
+

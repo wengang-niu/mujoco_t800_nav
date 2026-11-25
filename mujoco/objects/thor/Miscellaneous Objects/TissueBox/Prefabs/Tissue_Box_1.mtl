@@ -1,0 +1,17 @@
+newmtl TissueBoxVar4
+Kd 0.5367647 0.4917985 0.3039036
+map_Kd ExportedThorAssets/Textures/TissueBoxDIFVar1.png
+map_Kd ExportedThorAssets/Textures/Carpet1.JPG
+map_Bump ExportedThorAssets/Textures/TissueBoxNRM.png
+illum 2
+
+newmtl WHITE TissueBox
+Kd 0.8 0.8 0.8
+illum 2
+
+newmtl TissueBoxDIF
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/TissueBoxDIF.png
+map_Bump ExportedThorAssets/Textures/TissueBoxNRM.png
+illum 2
+

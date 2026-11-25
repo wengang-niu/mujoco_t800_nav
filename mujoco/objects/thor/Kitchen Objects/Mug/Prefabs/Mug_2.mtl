@@ -1,0 +1,11 @@
+newmtl Porcelain_Sand_Mat
+Kd 0.7254902 0.6431373 0.5647059
+map_Bump ExportedThorAssets/Textures/Copper_Normal.png
+illum 2
+
+newmtl Mug_Decals_Off_Mat
+Kd 1 1 1
+Tr 1
+d 0
+illum 2
+

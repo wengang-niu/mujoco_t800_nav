@@ -1,0 +1,10 @@
+newmtl DarkGlass.001
+Kd 0.04202719 0.04202719 0.04202719
+illum 2
+
+newmtl DarkWoodSmooth2
+Kd 0.1226415 0.09082413 0.09082413
+map_Kd iTHOR/Textures/WoodGrains1.jpg
+map_Bump iTHOR/Textures/HammeredMetal_Normal.png
+illum 2
+

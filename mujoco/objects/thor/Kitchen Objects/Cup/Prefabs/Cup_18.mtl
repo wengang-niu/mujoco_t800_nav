@@ -1,0 +1,12 @@
+newmtl Cup6_Mat (Paper - UB)
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/Cup_Paper_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/Cup_Paper_Normal.png
+illum 2
+
+newmtl Cup_Decals_Off_Mat
+Kd 1 1 1
+Tr 1
+d 0
+illum 2
+

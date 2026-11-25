@@ -1,0 +1,5 @@
+newmtl RoboTHOR_Pillow_Primary_Sanglarka_1_Mat
+Kd 0.9632353 0.9561527 0.9561527
+map_Kd ExportedThorAssets/Textures/RoboTHOR_Bed_Primary_Sanglarka_AlbedoTransparency.jpg
+illum 2
+

@@ -1,0 +1,9 @@
+newmtl DarkWood
+Kd 0.06071924 0.02241716 0.01465764
+illum 2
+
+newmtl marbleBase2
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/marbleBase2.jpg
+illum 2
+

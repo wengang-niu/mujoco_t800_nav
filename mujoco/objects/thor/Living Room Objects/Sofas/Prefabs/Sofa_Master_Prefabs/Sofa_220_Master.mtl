@@ -1,0 +1,7 @@
+newmtl Sofa3_Fabric_AlbedoTransparencyPAID
+Kd 0.5808823 0.5109614 0.4356617
+map_Kd ExportedThorAssets/Textures/Plaid2.jpg
+map_Ks ExportedThorAssets/Textures/Sofa3_Fabric_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/Sofa3_Fabric_Normal.png
+illum 2
+

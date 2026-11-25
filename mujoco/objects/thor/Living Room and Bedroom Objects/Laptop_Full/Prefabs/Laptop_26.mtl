@@ -1,0 +1,32 @@
+newmtl Laptop_Primary4_Mat
+Kd 0.8161765 0.8161765 0.8161765
+map_Ks ExportedThorAssets/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Laptop_Secondary4_Mat
+Kd 0.7205882 0.7205882 0.7205882
+map_Ks ExportedThorAssets/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl Laptop_Touchpad_Mat
+Kd 0.5654196 0.5898684 0.6102941
+map_Kd ExportedThorAssets/Textures/BrushedAluminum_AlbedoTransparency.png
+illum 2
+
+newmtl Laptop_Screen_Off_Mat
+Kd 0.005604492 0.005604492 0.005604492
+illum 2
+
+newmtl Laptop_Detail_Mat
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/Laptop_Detail_AlbedoTransparency.png
+illum 2
+
+newmtl Laptop_Decals_Off_Mat
+Kd 1 1 1
+Tr 1
+d 0
+illum 2
+

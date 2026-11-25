@@ -9,8 +9,8 @@ byte offset/size，脚本发 HTTP Range 请求只拉所需片段 → zstd 解压
 mujoco/objects/{thor,objaverse}。XML 里的 `../../objects/...` 相对路径正好
 解析到 mujoco/objects/，无需改 MJCF。
 
-不下载 Textures / SkyBox（+868MB，仅 11 个 PNG 被引用）。缺这 11 个文件时请
-用 train_37874_stripped.xml 加载；补齐后 train_37874.xml 可直接用。
+不下载 Textures / SkyBox（+868MB，仅 11 个 PNG 被引用，而加载的
+train_37874_stripped.xml 不引用它们，无需下载）。
 """
 from __future__ import annotations
 
@@ -164,7 +164,7 @@ def main() -> None:
     for name in scenes:
         sdir = os.path.join(SCENES, name)
         xmls = [f for f in os.listdir(sdir)
-                if f.endswith(".xml") and "ceiling" not in f and "stripped" not in f]
+                if f.endswith(".xml") and "ceiling" not in f]
         t, o = scene_external_paths(sdir, xmls[0])
         print(f"{name}: thor={len(t)} paths, objaverse={len(o)} ids")
         # 路径第一段是分类

@@ -1,0 +1,6 @@
+newmtl Pillow2_Mat
+Kd 0.2988591 0.1240809 0.375
+map_Kd ExportedThorAssets/Textures/PillowA_AlbedoTransparency.png
+map_Bump ExportedThorAssets/Textures/PillowA_Normal.png
+illum 2
+

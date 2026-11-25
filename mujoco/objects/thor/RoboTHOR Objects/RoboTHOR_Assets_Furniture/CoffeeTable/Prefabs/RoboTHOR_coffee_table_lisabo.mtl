@@ -1,0 +1,12 @@
+newmtl RoboTHOR_Coffee_Table_Lisabo_Wood_Mat
+Kd 0.937255 0.8745099 0.7372549
+map_Kd ExportedThorAssets/Textures/WoodGrains3.jpg
+illum 2
+
+newmtl HammeredMetal_AlbedoTransparency
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

@@ -1,0 +1,8 @@
+newmtl White SmallObjects
+Kd 1 1 1
+illum 2
+
+newmtl Countertop SmallObjects
+Kd 0.4769792 0.2633813 0.06126419
+illum 2
+

@@ -1,0 +1,14 @@
+newmtl WhiteWood
+Kd 1 1 1
+map_Kd ExportedThorAssets/Textures/TexturesCom_WoodWhite.png
+illum 2
+
+newmtl BrownMetal_s1
+Kd 0.3897059 0.2505252 0.1604671
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+
+newmtl WhiteWood1
+Kd 1 1 1
+illum 2
+

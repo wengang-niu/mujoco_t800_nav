@@ -1,0 +1,14 @@
+newmtl RoboTHOR_Dining_Table_Antas_Wood_Mat
+Kd 0.745283 0.5465206 0.3025849
+map_Kd ExportedThorAssets/Textures/WoodGrains1.jpg
+map_Kd ExportedThorAssets/Textures/WoodGrains2.jpg
+map_Bump ExportedThorAssets/Textures/TexturesCom_WoodFine0031_1_seamless_normal_S.png
+illum 2
+
+newmtl HammeredMetal_Dark
+Kd 0.2647059 0.2647059 0.2647059
+map_Kd ExportedThorAssets/Textures/HammeredMetal_AlbedoTransparency.png
+map_Ks ExportedThorAssets/Textures/HammeredMetal_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

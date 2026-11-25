@@ -1,0 +1,6 @@
+newmtl BlackPlastic
+Kd 0.1985294 0.1985294 0.1985294
+map_Ks ExportedThorAssets/Textures/FloorKitchen1Texturetest_DefaultMaterial_MetallicSmoothness.png
+map_Bump ExportedThorAssets/Textures/HammeredMetal_Normal.png
+illum 2
+

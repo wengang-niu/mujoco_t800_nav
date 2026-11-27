@@ -20,7 +20,7 @@ model/             # MNN 行走策略（22 关节）
 mujoco/
   t800.xml         # 顶层模型：robot + 平地
   robot/           # T800 MJCF + mesh + 贴图
-  environment/     # 平地 ground.xml
+  scene/           # 场景（ground/ 平地）
 doc/               # 文档配图
 ```
 
@@ -71,7 +71,7 @@ python source/main.py --config path/to/other.yaml   # 换配置
 
 ## 场景
 
-当前为平地 `mujoco/environment/ground.xml`。如需换成房间场景：
+当前为平地 `mujoco/scene/ground/ground.xml`。如需换成房间场景：
 在 `mujoco/t800.xml` 里把平地 include 换成场景 include，并把 `reset.base_pos` 改为场景出生点。
 注意场景自带 `geom name="floor"` 时不要再 include `ground.xml`（重名会加载失败）。
 

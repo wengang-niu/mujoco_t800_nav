@@ -2,6 +2,15 @@
 
 本项目版本记录遵循 [Keep a Changelog](https://keepachangelog.com/zh-CN/) 风格，版本号语义化。
 
+## [Unreleased]
+
+### Changed
+- 移除咖啡馆场景 `mujoco/scenes/cafe_37874/` 与场景家具资源 `mujoco/objects/`（及 `doc/scene.png`），
+  默认环境改为平地 `environment/ground.xml`，出生点 `reset.base_pos` 改回 `[0.0, 0.0]`。
+
+### Removed
+- `--check` 无显示冒烟测试模式，只保留 viewer 遥控一种用法。
+
 ## [v0.0.0] - 2026-11-25
 
 首次发布：键盘控制行走。

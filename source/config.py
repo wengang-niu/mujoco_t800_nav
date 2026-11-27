@@ -39,7 +39,7 @@ class Config:
     frame_skip: int
     # 复位
     base_z: float
-    base_pos: np.ndarray       # (2,) 出生点 x,y —— 由场景决定，默认原点
+    base_pos: np.ndarray       # (2,) 出生点 x,y，默认原点
     # 遥控
     cmd_step: float
     vx_limit: float

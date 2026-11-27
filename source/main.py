@@ -5,7 +5,6 @@
 
 运行：
     python source/main.py                # 打开 viewer 遥控
-    python source/main.py --check        # 无显示冒烟测试
 """
 from __future__ import annotations
 
@@ -29,21 +28,10 @@ def main():
     parser = argparse.ArgumentParser(description="T800 遥控行走")
     parser.add_argument("--config", type=pathlib.Path, default=None,
                         help="配置文件路径，默认 config/t800.yaml")
-    parser.add_argument("--check", action="store_true",
-                        help="无显示冒烟测试：加载模型+策略并跑几步")
     args = parser.parse_args()
 
     cfg = load_config(args.config)
     w = Walker(cfg)
-
-    if args.check:
-        import numpy as np
-        for i in range(5):
-            w.step(command=(0.0, 0.0, 0.0), kp_ratio=1.0)
-            print(f"step {i}: qpos[:3]={w.data.qpos[:3]} "
-                  f"prev_action[:3]={w.prev_action[:3]}")
-        print("check OK")
-        return
 
     cmd = [0.0, 0.0, 0.0]  # [vx 前后, vy 侧移(未绑定按键), yaw_rate 转向]
     step = cfg.cmd_step

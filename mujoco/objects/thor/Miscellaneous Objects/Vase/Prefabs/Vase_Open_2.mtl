@@ -1,7 +1,0 @@
-newmtl Glass_Blue_Mat
-Kd 0.2251838 0.2764325 0.3602941
-Tr 0.178
-d 0.822
-map_Ks ExportedThorAssets/Textures/Glass2MetallicSmoothness.png
-illum 2
-

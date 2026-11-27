@@ -1,6 +1,0 @@
-newmtl Paper_Towel_Mat
-Kd 1 1 1
-map_Kd ExportedThorAssets/Textures/PaperRollDIF.png
-map_Bump ExportedThorAssets/Textures/PaperRollNRM.png
-illum 2
-

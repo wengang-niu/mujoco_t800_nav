@@ -1,6 +1,0 @@
-newmtl Pillow15_Mat
-Kd 0.3602941 0.2459939 0
-map_Kd ExportedThorAssets/Textures/FabricPattern.jpg
-map_Bump ExportedThorAssets/Textures/PillowD_Normal.png
-illum 2
-

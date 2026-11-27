@@ -1,7 +1,0 @@
-newmtl Pillow3_Mat
-Kd 0.2540009 0.4264706 0.3336937
-map_Kd ExportedThorAssets/Textures/bedPillowAO.png
-map_Kd ExportedThorAssets/Textures/FabricPattern.jpg
-map_Bump ExportedThorAssets/Textures/bedPillowNRM.png
-illum 2
-

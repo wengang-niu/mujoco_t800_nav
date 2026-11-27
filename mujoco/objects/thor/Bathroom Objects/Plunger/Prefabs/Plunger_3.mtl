@@ -1,9 +1,0 @@
-newmtl RobinEgg
-Kd 0.384083 0.7058823 0.6259873
-map_Kd ExportedThorAssets/Textures/TexturesCom_WoodWhite.png
-illum 2
-
-newmtl WoodFineDark
-Kd 0.162629 0.07102513 0.05809732
-illum 2
-

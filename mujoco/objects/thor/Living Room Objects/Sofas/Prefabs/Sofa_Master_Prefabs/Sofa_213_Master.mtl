@@ -1,6 +1,0 @@
-newmtl Sofa2_Fabric_AlbedoTransparencyVARPINK
-Kd 0.9264706 0.2248054 0.3957236
-map_Kd ExportedThorAssets/Textures/Sofa2_Fabric_AlbedoTransparency.png
-map_Bump ExportedThorAssets/Textures/Sofa2_Fabric_Normal.png
-illum 2
-

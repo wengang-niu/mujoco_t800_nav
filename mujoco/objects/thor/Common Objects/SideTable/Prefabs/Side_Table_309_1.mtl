@@ -1,6 +1,0 @@
-newmtl BedroomFloor1
-Kd 1 0.9117647 0.9117647
-map_Kd iTHOR/Textures/TexturesCom_WoodFine0038_1_seamless_albedo_S.png
-map_Bump iTHOR/Textures/HammeredMetal_Normal.png
-illum 2
-

@@ -1,6 +1,0 @@
-newmtl Statue1
-Kd 1 0.859375 0.7352941
-map_Kd ExportedThorAssets/Textures/marbleBase2.jpg
-map_Bump ExportedThorAssets/Textures/Statue1NRM.png
-illum 2
-

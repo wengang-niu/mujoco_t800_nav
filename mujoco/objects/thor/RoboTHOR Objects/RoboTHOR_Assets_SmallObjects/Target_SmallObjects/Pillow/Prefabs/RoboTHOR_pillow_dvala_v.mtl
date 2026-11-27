@@ -1,6 +1,0 @@
-newmtl RoboTHOR_Pillow_Primary_Dvala_Mat
-Kd 0.8470588 0.8470588 0.8470588
-map_Kd ExportedThorAssets/Textures/RoboTHOR_Pillow_Primary_Dvala_AlbedoTransparency.png
-map_Bump ExportedThorAssets/Textures/RoboTHOR_Pillow_Primary_Dvala_Normal.png
-illum 2
-

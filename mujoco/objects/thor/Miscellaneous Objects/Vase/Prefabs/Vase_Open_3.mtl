@@ -1,7 +1,0 @@
-newmtl Glass_Detailed_Frosted_Mat
-Kd 0.4779412 0.4779412 0.4779412
-Tr 1
-d 0
-map_Ks ExportedThorAssets/Textures/Glass2MetallicSmoothness.png
-illum 2
-

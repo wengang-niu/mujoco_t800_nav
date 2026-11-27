@@ -1,6 +1,0 @@
-newmtl Cardboard_Mat1
-Kd 1 0.975 0.9558824
-map_Kd ExportedThorAssets/Textures/Cardboard_AlbedoTransparency.png
-map_Bump ExportedThorAssets/Textures/Cardboard_Normal.png
-illum 2
-

@@ -1,6 +1,0 @@
-newmtl 1 CreditCards
-Kd 1 1 1
-map_Kd ExportedThorAssets/Textures/1.png
-map_Bump ExportedThorAssets/Textures/1NRM.png
-illum 2
-

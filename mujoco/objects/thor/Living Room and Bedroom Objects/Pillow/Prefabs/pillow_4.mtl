@@ -1,6 +1,0 @@
-newmtl Pillow4_Mat
-Kd 0.4411765 0.03243945 0.03243945
-map_Kd ExportedThorAssets/Textures/PillowA_AlbedoTransparency.png
-map_Bump ExportedThorAssets/Textures/PillowA_Normal.png
-illum 2
-

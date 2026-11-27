@@ -1,6 +1,0 @@
-newmtl Pillow26_Mat
-Kd 1 1 1
-map_Kd ExportedThorAssets/Textures/CurtainPattern.png
-map_Bump ExportedThorAssets/Textures/PillowG_Normal.png
-illum 2
-

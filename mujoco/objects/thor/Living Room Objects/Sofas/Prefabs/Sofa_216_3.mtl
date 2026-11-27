@@ -1,7 +1,0 @@
-newmtl Sofa_velvet.001_AlbedoTransparencyVar5
-Kd 0.7352941 0.6446128 0.5298443
-map_Kd ExportedThorAssets/Textures/Sofa_velvet.001_AlbedoTransparency.png
-map_Ks ExportedThorAssets/Textures/Sofa_velvet.001_MetallicSmoothness.png
-map_Bump ExportedThorAssets/Textures/Sofa_velvet.001_Normal.png
-illum 2
-

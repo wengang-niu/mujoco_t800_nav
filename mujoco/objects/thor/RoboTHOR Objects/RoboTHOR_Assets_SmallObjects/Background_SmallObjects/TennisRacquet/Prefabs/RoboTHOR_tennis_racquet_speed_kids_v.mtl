@@ -1,6 +1,0 @@
-newmtl RoboTHOR_Tennis_Racquet_Primary_Mat
-Kd 1 1 1
-map_Kd ExportedThorAssets/Textures/RoboTHOR_Tennis_Racquet_Primary_AlbedoTransparency.png
-map_Ks ExportedThorAssets/Textures/RoboTHOR_Tennis_Racquet_Primary_MetallicSmoothness.jpg
-illum 2
-

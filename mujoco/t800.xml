@@ -1,11 +1,9 @@
 <mujoco model="global_model">
-    <!-- robot 必须在场景之前：walker.py 假设 freejoint 在 qpos[0:7]，
-         场景有 130 个关节，若在前会把 freejoint 推到 qposadr=502 -->
+    <!-- robot 在前：walker.py 假设 freejoint 在 qpos[0:7] -->
     <include file="robot/t800/xml/serial_t800.xml"/>
-    <!-- 咖啡馆场景（allenai/molmospaces holodeck train_37874）。
-         注意：不要同时 include environment/ground.xml —— 场景自带 geom name="floor"，
-         重名是硬错误，且会造成双地板 z-fighting。 -->
-    <include file="scenes/cafe_37874/train_37874_stripped.xml"/>
+    <!-- 平地。如换场景：把下面换成场景 include，并把 reset.base_pos 改为场景出生点；
+         场景自带 geom name="floor" 时不要再 include ground.xml（重名是硬错误）。 -->
+    <include file="environment/ground.xml"/>
     <!-- 15kg box (1m × 1m × 2m) -->
     <!-- <worldbody>
         <body name="box_15kg" pos="1.5 0 1.0">

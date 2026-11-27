@@ -64,7 +64,7 @@ class Walker:
     def reset(self):
         cfg = self.cfg
         mujoco.mj_resetData(self.model, self.data)        # 状态清零回默认
-        self.data.qpos[0:2] = cfg.base_pos                 # 浮基出生点 x,y（由场景决定）
+        self.data.qpos[0:2] = cfg.base_pos                 # 浮基出生点 x,y
         self.data.qpos[2] = cfg.base_z                    # 浮基高度（freejoint 无名，qpos[2]=z）
         self.data.qpos[self.qadr] = cfg.default_q         # 25 关节摆到默认站姿
         self.data.qvel[:] = 0.0                           # 速度清零（站稳起步）

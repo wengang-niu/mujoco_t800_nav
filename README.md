@@ -18,14 +18,10 @@ config/
   t800.yaml        # 全部可调参数（关节/PD/观测缩放/时序/按键/出生点）
 model/             # MNN 行走策略（22 关节）
 mujoco/
-  t800.xml         # 顶层模型：robot + 场景
+  t800.xml         # 顶层模型：robot + 平地
   robot/           # T800 MJCF + mesh + 贴图
-  scenes/          # 场景（cafe_37874 咖啡馆）
-  objects/         # 场景家具资源（2.5GB，gitignore，用 tools/ 重建）
-  environment/     # 备用平地场景 ground.xml
-tools/
-  fetch_scene_assets.py   # 重新拉取 mujoco/objects/ 大体积资源
-doc/               # 文档配图 + 场景备忘
+  environment/     # 平地 ground.xml
+doc/               # 文档配图
 ```
 
 ## 环境
@@ -43,7 +39,6 @@ pip install -r requirements.txt   # 若环境已就绪可跳过
 ```bash
 conda activate t800
 python source/main.py                # 打开 viewer 遥控
-python source/main.py --check        # 无显示冒烟测试
 python source/main.py --config path/to/other.yaml   # 换配置
 ```
 
@@ -72,28 +67,17 @@ python source/main.py --config path/to/other.yaml   # 换配置
 - `observation`：各观测分量缩放与截断、历史帧数
 - `teleop`：按键步长、限幅、软启动
 - `timing`：控制/仿真周期
-- `reset`：出生点 `base_pos`（x,y）与高度 `base_z` —— 由场景决定，换场景时改这里
+- `reset`：出生点 `base_pos`（x,y）与高度 `base_z`
 
 ## 场景
 
-当前场景是咖啡馆 `mujoco/scenes/cafe_37874/`（sales floor 128㎡ + bakery kitchen 等），
-俯视图见 `doc/scene.png`。
-
-- 实际加载的是 `train_37874_stripped.xml`（已删减缺失纹理的引用，可直接加载）。
-- `mujoco/objects/`（2.5GB）不入版本库，缺资源时重建：
-
-  ```bash
-  python tools/fetch_scene_assets.py cafe_37874
-  ```
-
-- 换回平地：`mujoco/t800.xml` 里把场景 include 换成 `environment/ground.xml`，
-  并把 `reset.base_pos` 改回 `[0.0, 0.0]`。
-  注意两者不能同时 include（都定义了 `geom name="floor"`，重名会加载失败）。
+当前为平地 `mujoco/environment/ground.xml`。如需换成房间场景：
+在 `mujoco/t800.xml` 里把平地 include 换成场景 include，并把 `reset.base_pos` 改为场景出生点。
+注意场景自带 `geom name="floor"` 时不要再 include `ground.xml`（重名会加载失败）。
 
 ## 资产来源
 
 - 机器人 MJCF / mesh 来自 [engineai-robotics/engineai_robotics_native_sdk](https://github.com/engineai-robotics/engineai_robotics_native_sdk)（仅保留 T800 所需子集）。
-- 咖啡馆场景来自 [allenai/molmospaces](https://huggingface.co/datasets/allenai/molmospaces)（holodeck-objaverse-train `train_37874`，CC-BY-4.0 / ODC-BY）。
 
 ## 更新日志
 

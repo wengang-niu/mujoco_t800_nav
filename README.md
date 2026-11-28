@@ -2,7 +2,7 @@
 
 用 MuJoCo 仿真 T800 人形机器人，加载 MNN 行走策略，键盘遥控前进/后退/转向。
 
-**当前版本：[v0.0.0](CHANGELOG.md)**（键盘控制行走）
+**当前版本：[v0.0.1](CHANGELOG.md)**（键盘控制行走 + 头部相机）
 
 ![demo](doc/image.png)
 
@@ -122,7 +122,7 @@ python source/main.py --config path/to/other.yaml   # 换配置
 
 ## 更新日志
 
-见 [CHANGELOG.md](CHANGELOG.md)。当前版本 `v0.0.0`：键盘控制行走。
+见 [CHANGELOG.md](CHANGELOG.md)。当前版本 `v0.0.1`：键盘控制行走 + 头部相机。
 
 
 

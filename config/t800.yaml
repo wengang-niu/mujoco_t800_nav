@@ -119,7 +119,7 @@ reset:
   base_pos: [-5.0, -5.0]   # 出生点 x,y —— 仓库 Alpha home bay（平地场景改回 [0, 0]）
 
 teleop:
-  cmd_step: 0.3            # 每次按键速度增量 (m/s 或 rad/s)
+  cmd_step: 0.1            # 每次按键速度增量 (m/s 或 rad/s)
   vx_limit: 0.6
   yaw_limit: 1.0
   soft_start_duration: 0.5 # 软启动时长 (s)

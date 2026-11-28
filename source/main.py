@@ -4,7 +4,7 @@
 实现 ↑/↓ 前进后退、←/→ 左右转向。
 
 运行：
-    python source/main.py                # 打开 viewer 遥控
+    python source/main.py   # 打开 viewer 遥控；qpos 同步写到 /tmp/t800_qpos.bin
 """
 from __future__ import annotations
 
@@ -15,10 +15,13 @@ import time
 
 import mujoco
 import mujoco.viewer  # 需显式导入，否则 mujoco.viewer 不存在
+import numpy as np
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from config import load_config            # noqa: E402
 from walker import Walker                 # noqa: E402
+
+STATE_PATH = pathlib.Path("/tmp/t800_qpos.bin")  # camera_view.py 读取
 
 # GLFW 键码（MuJoCo viewer 的 key_callback 传入的即 GLFW 键码）
 KEY_RIGHT, KEY_LEFT, KEY_DOWN, KEY_UP, KEY_SPACE = 262, 263, 264, 265, 32
@@ -54,6 +57,12 @@ def main():
             cmd = [0.0, 0.0, 0.0]
         print(f"command = [{cmd[0]:+.2f}, {cmd[1]:+.2f}, {cmd[2]:+.2f}]")
 
+    # 发布 qpos 供 camera_view.py 读取（复用旧文件，避免打断已在运行的读端）
+    nbytes = w.model.nq * np.dtype(np.float64).itemsize
+    reuse = STATE_PATH.exists() and STATE_PATH.stat().st_size == nbytes
+    state = np.memmap(STATE_PATH, dtype=np.float64,
+                      mode="r+" if reuse else "w+", shape=(w.model.nq,))
+
     with mujoco.viewer.launch_passive(w.model, w.data, key_callback=key_cb) as viewer:
         k = 0
         while viewer.is_running():
@@ -61,6 +70,7 @@ def main():
             # 避免满增益瞬间把机器人"钉死"或弹倒
             ratio = min(1.0, k / transition)
             w.step(command=cmd, kp_ratio=r_min + (1.0 - r_min) * ratio)
+            state[:] = w.data.qpos
             viewer.sync()
             time.sleep(cfg.control_dt)
             k += 1

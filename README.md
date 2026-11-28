@@ -13,6 +13,8 @@ source/
   main.py          # 入口：键盘 + viewer + 软启动循环
   walker.py        # Walker 编排 + 仿真工具（模型加载/PD/观测构建）
   policy.py        # MnnPolicy（MNN 加载与推理）
+  camera.py        # 头部 RGB 相机（离屏渲染）
+  camera_view.py   # OpenCV 实时相机窗口（独立脚本，读 qpos 共享文件）
   config.py        # 读 YAML → numpy 配置对象
 config/
   t800.yaml        # 全部可调参数（关节/PD/观测缩放/时序/按键/出生点）
@@ -53,6 +55,32 @@ python source/main.py --config path/to/other.yaml   # 换配置
 | 空格 | 停止 | 全部归零 |
 
 步长与限幅在 `config/t800.yaml` 的 `teleop` 段。
+
+## 头部相机
+
+`mujoco/robot/t800/xml/serial_links.xml` 的 `LINK_HEAD_YAW` 上挂了一个名为 `head` 的 RGB 相机
+（朝机体 +x、图像上方 +z、`fovy=60`，站立时约 1.67 m 高）。
+
+- **viewer 第一视角**：运行 `source/main.py` 后，在左侧 Rendering 面板把 Camera 选到 `head`。
+- **OpenCV 实时窗口**（两个独立启动脚本）：
+
+  ```bash
+  # 终端 1：仿真（qpos 自动写到 /tmp/t800_qpos.bin）
+  python source/main.py
+  # 终端 2：读取 qpos，用 OpenCV 显示 head 相机
+  python source/camera_view.py
+  ```
+
+  相机脚本与 viewer 分属两个进程，避免 OpenGL 上下文冲突；按 `Esc`/`q` 或关闭窗口即可退出相机窗口。
+  若方向键没有反应，先点一下 viewer 窗口让它获得键盘焦点。
+- **代码取图**：
+
+  ```python
+  from camera import HeadCamera
+
+  with HeadCamera(w.model) as cam:
+      rgb = cam.render(w.data)   # (480, 640, 3) uint8
+  ```
 
 ## 算法数据流
 

@@ -167,6 +167,8 @@
         <joint name="J24_HEAD_YAW" pos="0 0 0" axis="0 0 1" range="-1.222 1.222" actuatorfrcrange="-52 52" armature="0.00671625"/>
         <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="LINK_HEAD_YAW" material="LINK_HEAD_YAW" class="visual"/>
         <geom class="collision_head"/>
+        <!-- 头部 RGB 相机：相机 -z 为视线、+y 为上；xyaxes 使其朝 +x、图像上方朝 +z -->
+        <camera name="head" pos="0.13 0 0.11" xyaxes="0 -1 0 0 0 1" fovy="60"/>
       </body>
     </body>
   </body>

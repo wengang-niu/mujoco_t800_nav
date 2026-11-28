@@ -1,0 +1,71 @@
+<mujoco model="hero_layout">
+  <!-- hero_layout — 上游 VLA_mujoco_multi_unitree_warehouse 的固定演示布局
+       由 code/warehouse/layout.py::hero_layout() 生成：16 x 12 m 大厅，
+       两排双面货架(中缝 1.4 m)、NE L 形隔断 + SW 短墙、东侧绿色交货垫、
+       南墙 4 个机器人 home bay、8 个物体点位。
+       场景自带 geom name="floor" —— 不要再 include scene/ground/ground.xml（重名会报错）。
+       出生点（config t800.yaml -> reset.base_pos，朝向均 +y = pi/2）：
+         Alpha    x=-5  y=-5  yaw=1.570796
+         Bravo    x=-2  y=-5  yaw=1.570796
+         Charlie  x=2  y=-5  yaw=1.570796
+         Delta    x=5  y=-5  yaw=1.570796
+  -->
+
+  <visual>
+    <!-- ambient 0.5 * 0.6 与上游 arena.build_warehouse_arena 一致 -->
+    <headlight diffuse="0.12 0.12 0.11" ambient="0.3 0.29 0.27" specular="0 0 0"/>
+    <rgba haze="0.15 0.25 0.35 1"/>
+    <global azimuth="150" elevation="-20"/>
+    <!-- 不要加 <statistic extent="1">：extent 决定方向光 shadow frustum 覆盖范围，
+         extent=1 会让大厅里的阴影碎成点阵痤疮（2026-11-27 已踩坑）。
+         留空由编译器按几何包围盒自动算（本场景 ≈28.3）。 -->
+    <quality shadowsize="2048"/>
+  </visual>
+
+  <asset>
+    <!-- 浅灰工业地砖（上游 _apply_floor 的配色），哑光无反射 -->
+    <texture type="2d" name="groundplane" builtin="checker" mark="edge" rgb1="0.96 0.96 0.98" rgb2="0.9 0.9 0.93" markrgb="0.74 0.75 0.8" width="512" height="512"/>
+    <material name="groundplane" texture="groundplane" texuniform="true" texrepeat="0.8 0.8" reflectance="0"/>
+  </asset>
+
+  <worldbody>
+    <!-- 两盏平行方向光：暖主光投影 + 冷补光不投影（上游 _add_overhead_lights） -->
+    <light name="key" pos="2.4 -1.2 8" dir="-0.25 0.18 -1" type="directional" diffuse="0.55 0.53 0.48" specular="0.05 0.05 0.05" castshadow="true"/>
+    <light name="fill" pos="-2.4 1.2 8" dir="0.25 -0.18 -1" type="directional" diffuse="0.22 0.22 0.24" specular="0 0 0" castshadow="false"/>
+
+    <geom name="floor" type="plane" size="0 8.5 6.5" material="groundplane" rgba="0.86 0.86 0.88 1" conaffinity="7" condim="3" friction="1.0"/>
+
+    <!-- 墙体/货架/隔断：WallSpec -> yawed box（上游 arena._add_wall） -->
+    <geom name="wall_E" type="box" size="0.1 6 1.25" pos="8 0 1.25" rgba="0.74 0.75 0.78 1"/>
+    <geom name="wall_W" type="box" size="0.1 6 1.25" pos="-8 0 1.25" rgba="0.74 0.75 0.78 1"/>
+    <geom name="wall_N" type="box" size="8 0.1 1.25" pos="0 6 1.25" rgba="0.74 0.75 0.78 1"/>
+    <geom name="wall_S" type="box" size="8 0.1 1.25" pos="0 -6 1.25" rgba="0.74 0.75 0.78 1"/>
+    <geom name="shelf_A_w" type="box" size="0.775 0.35 0.9" pos="-1.475 2 0.9" rgba="0.55 0.4 0.24 1"/>
+    <geom name="shelf_A_e" type="box" size="0.775 0.35 0.9" pos="1.475 2 0.9" rgba="0.55 0.4 0.24 1"/>
+    <geom name="shelf_B_w" type="box" size="0.775 0.35 0.9" pos="-1.475 -2 0.9" rgba="0.55 0.4 0.24 1"/>
+    <geom name="shelf_B_e" type="box" size="0.775 0.35 0.9" pos="1.475 -2 0.9" rgba="0.55 0.4 0.24 1"/>
+    <geom name="part_ne_v" type="box" size="0.1 1.25 1" pos="5 4.75 1" rgba="0.62 0.64 0.68 1"/>
+    <geom name="part_ne_h" type="box" size="1 0.1 1" pos="6 3.5 1" rgba="0.62 0.64 0.68 1"/>
+    <geom name="part_sw" type="box" size="0.1 0.75 1" pos="-4.5 -3.25 1" rgba="0.62 0.64 0.68 1"/>
+
+    <!-- 地贴：交货垫 + 4 个 home bay（视觉用，不参与碰撞） -->
+    <geom name="zone_delivery" type="box" size="1 1 0.005" pos="5.8 -1 0.01" rgba="0.3 0.6 0.4 0.52" contype="0" conaffinity="0"/>
+    <geom name="zone_bay_Alpha" type="box" size="0.8 0.7 0.005" pos="-5 -5 0.01" rgba="0.78 0.3 0.3 0.5" contype="0" conaffinity="0"/>
+    <geom name="zone_bay_Bravo" type="box" size="0.8 0.7 0.005" pos="-2 -5 0.01" rgba="0.34 0.44 0.78 0.5" contype="0" conaffinity="0"/>
+    <geom name="zone_bay_Charlie" type="box" size="0.8 0.7 0.005" pos="2 -5 0.01" rgba="0.8 0.72 0.34 0.5" contype="0" conaffinity="0"/>
+    <geom name="zone_bay_Delta" type="box" size="0.8 0.7 0.005" pos="5 -5 0.01" rgba="0.56 0.38 0.7 0.5" contype="0" conaffinity="0"/>
+
+    <!-- 8 个物体（object_spots + 上游 seed=0 默认配色/形状采样），静态地标 -->
+    <geom name="obj_0" type="box" size="0.12 0.12 0.12" pos="-1.5 0 0.12" rgba="0.941176 0.54902 0.117647 1"/>
+    <geom name="obj_1" type="cylinder" size="0.11 0.176 0.11" pos="1.5 0 0.176" rgba="0.862745 0.156863 0.156863 1"/>
+    <geom name="obj_2" type="sphere" size="0.12" pos="0 0.7 0.12" rgba="0.862745 0.156863 0.156863 1"/>
+    <geom name="obj_3" type="cylinder" size="0.13 0.143 0.13" pos="-1.5 3.3 0.143" rgba="0.196078 0.352941 0.862745 1"/>
+    <geom name="obj_3_tip" type="box" size="0.0455 0.0455 0.1287" pos="-1.5 3.3 0.4147" rgba="0.166667 0.3 0.733333 1"/>
+    <geom name="obj_4" type="cylinder" size="0.13 0.143 0.13" pos="1.5 3.3 0.143" rgba="0.921569 0.803922 0.156863 1"/>
+    <geom name="obj_4_tip" type="box" size="0.0455 0.0455 0.1287" pos="1.5 3.3 0.4147" rgba="0.783333 0.683333 0.133333 1"/>
+    <geom name="obj_5" type="cylinder" size="0.11 0.176 0.11" pos="6.5 4.7 0.176" rgba="0.921569 0.803922 0.156863 1"/>
+    <geom name="obj_6" type="box" size="0.12 0.12 0.12" pos="-5 0.5 0.12" rgba="0.862745 0.156863 0.156863 1"/>
+    <geom name="obj_7" type="cylinder" size="0.11 0.176 0.11" pos="3 -0.5 0.176" rgba="0.156863 0.705882 0.27451 1"/>
+  </worldbody>
+
+</mujoco>

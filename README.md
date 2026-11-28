@@ -20,7 +20,7 @@ model/             # MNN 行走策略（22 关节）
 mujoco/
   t800.xml         # 顶层模型：robot + 平地
   robot/           # T800 MJCF + mesh + 贴图
-  scene/           # 场景（ground/ 平地）
+  scene/           # 场景（ground/ 平地、warehouse/ hero_layout 仓库）
 doc/               # 文档配图
 ```
 
@@ -71,9 +71,22 @@ python source/main.py --config path/to/other.yaml   # 换配置
 
 ## 场景
 
-当前为平地 `mujoco/scene/ground/ground.xml`。如需换成房间场景：
-在 `mujoco/t800.xml` 里把平地 include 换成场景 include，并把 `reset.base_pos` 改为场景出生点。
-注意场景自带 `geom name="floor"` 时不要再 include `ground.xml`（重名会加载失败）。
+当前为 hero_layout 仓库 `mujoco/scene/warehouse/warehouse.xml`
+（来自 [VLA_mujoco_multi_unitree_warehouse](https://github.com/KiwooShin/VLA_mujoco_multi_unitree_warehouse)：
+16×12 m 大厅、两排货架、NE 隔断、东侧交货垫、南墙 4 个 home bay、8 个物体）。
+
+自己切换场景（两个场景都定义 `geom name="floor"`，include 只能二选一，同开会加载失败）：
+
+1. **换 include**：编辑 `mujoco/t800.xml`，放开要生效的场景 include、注释掉另一个。
+2. **改出生点**：编辑 `config/t800.yaml` 的 `reset.base_pos`（config 只在启动时读一次，改完必须重启）。
+3. **重启**：`conda activate t800 && python source/main.py`。
+
+| 场景 | include | `reset.base_pos` |
+|---|---|---|
+| 仓库（当前） | `scene/warehouse/warehouse.xml` | 任选：Alpha `[-5,-5]`、Bravo `[-2,-5]`、Charlie `[2,-5]`、Delta `[5,-5]` |
+| 平地 | `scene/ground/ground.xml` | `[0, 0]` |
+
+注：`reset` 无朝向字段，出生朝向固定为 +x；仓库 bay 沿南墙，朝 +x 即沿墙开阔通道。
 
 ## 资产来源
 
@@ -82,3 +95,8 @@ python source/main.py --config path/to/other.yaml   # 换配置
 ## 更新日志
 
 见 [CHANGELOG.md](CHANGELOG.md)。当前版本 `v0.0.0`：键盘控制行走。
+
+
+
+## 参考
+https://github.com/KiwooShin/VLA_mujoco_multi_unitree_warehouse

@@ -1,9 +1,13 @@
 <mujoco model="global_model">
     <!-- robot 在前：walker.py 假设 freejoint 在 qpos[0:7] -->
     <include file="robot/t800/xml/serial_t800.xml"/>
-    <!-- 平地。如换场景：把下面换成场景 include，并把 reset.base_pos 改为场景出生点；
-         场景自带 geom name="floor" 时不要再 include ground.xml（重名是硬错误）。 -->
-    <include file="scene/ground/ground.xml"/>
+    <!-- 当前场景：hero_layout 仓库（scene/warehouse/warehouse.xml）。
+         两个场景都定义 geom name="floor"，只能二选一 include（同开是硬错误）。
+         换场景时同步改 config/t800.yaml 的 reset.base_pos：
+           仓库出生点  Alpha[-5,-5] / Bravo[-2,-5] / Charlie[2,-5] / Delta[5,-5]
+           平地出生点  [0, 0] -->
+    <!-- <include file="scene/ground/ground.xml"/> -->
+    <include file="scene/warehouse/warehouse.xml"/>
     <!-- 15kg box (1m × 1m × 2m) -->
     <!-- <worldbody>
         <body name="box_15kg" pos="1.5 0 1.0">

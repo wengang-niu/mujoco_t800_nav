@@ -116,7 +116,7 @@ timing:
 
 reset:
   base_z: 1.02             # 浮基初始高度 (m)
-  base_pos: [0.0, 0.0]     # 出生点 x,y —— 平地原点（换场景时改为场景出生点）
+  base_pos: [-5.0, -5.0]   # 出生点 x,y —— 仓库 Alpha home bay（平地场景改回 [0, 0]）
 
 teleop:
   cmd_step: 0.3            # 每次按键速度增量 (m/s 或 rad/s)

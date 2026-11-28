@@ -147,7 +147,9 @@
     </asset>
 
     <worldbody>
-      <light name="spotlight" mode="targetbodycom" target="LINK_BASE" pos="0 -1 2"/>
+      <!-- 跟随底座的补光灯。castshadow 必须关：灯贴身 2 m，投出的本体影子
+           深度精度极差，会在地板上碎成点阵痤疮（场景阴影交给场景方向光）。 -->
+      <light name="spotlight" mode="targetbodycom" target="LINK_BASE" pos="0 -1 2" castshadow="false"/>
         <body name="LINK_BASE" pos="0 0 1.03">
             <inertial pos="0.01487209 -0.00011942 0.1673244" mass="10.083072" fullinertia="0.05060425 0.03390366 0.03284694 -7.548e-05 -0.00053095 -4.685e-05"/>
             <geom type="mesh" rgba="0.79216 0.81961 0.93333 1" mesh="LINK_BASE" material="LINK_BASE" class="visual"/>
